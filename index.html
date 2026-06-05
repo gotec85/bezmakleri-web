@@ -24,7 +24,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bezmakléři s.r.o.","url":"https://www.bezmakleri.cz","logo":"https://www.bezmakleri.cz/assets/logo/logo.webp","email":"martin.gottvald@bezmakleri.cz","telephone":"+420602516031","sameAs":["https://www.facebook.com/profile.php?id=61579084846986","https://instagram.com/realpromo.cz","https://www.youtube.com/channel/UCAn0D2KPFFOLC_MJQJZw8Ww"]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Marketing nemovitosti bez provize","description":"Profesionální prezentace nemovitostí – foto, video, 3D prohlídky, reklamní kampaně, právní servis.","url":"https://www.bezmakleri.cz","areaServed":{"@type":"Country","name":"Česká republika"},"offers":[{"@type":"Offer","name":"Standardní balíček","price":"40000","priceCurrency":"CZK"}]}</script>
@@ -35,10 +35,7 @@
     <div class="container navbar-inner">
       <a href="#uvod" class="logo-link">
         <img src="assets/logo/logo.webp" alt="Bezmakléři" class="logo-img" width="44" height="40" />
-        <div class="logo-text">
-          <span class="logo-main">BEZMAKLÉŘI</span>
-          <span class="logo-sub">bez provizí</span>
-        </div>
+        <span class="logo-main">BEZMAKLÉŘI</span>
       </a>
       <nav class="nav-links" id="nav-links">
         <a href="#uvod">Úvod</a>
@@ -47,13 +44,13 @@
         <a href="#reference">Reference</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
-      <a href="#kontakt" class="btn btn-primary nav-cta">Nezávazná poptávka</a>
       <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <!-- HERO -->
   <section id="uvod" class="hero">
     <video class="hero-video" autoplay muted loop playsinline poster="assets/foto/hero.webp">
       <source src="assets/video/hero.mp4" type="video/mp4">
@@ -61,57 +58,33 @@
     <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-content fade-in">
-        <h1>Prodejte nemovitost.<br>Bez provizí.</h1>
-        <p class="hero-subtitle">Profesionální marketing místo statisícových odměn makléřům</p>
-        <p class="hero-perex">Pomáháme prodávat nemovitosti bez provizí realitním makléřům. Silný online marketing a atraktivní vizuální obsah jsou klíčem k výhodnějšímu prodeji.</p>
+        <h1>JSME BEZMAKLÉŘI</h1>
+        <p class="hero-subtitle">Pomáháme prodávat nemovitosti bez provizi realitním makléřům a kancelářím</p>
         <div class="hero-actions">
-          <a href="#kontakt" class="btn btn-gold">Nezávazná poptávka</a>
-          <a href="#sluzby" class="btn btn-outline">Prohlédnout služby ↓</a>
+          <a href="#kontakt" class="btn btn-red btn-pill">Nezávazná poptávka služeb</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="vyhody" class="why">
+  <!-- SLUŽBY -->
+  <section id="sluzby" class="services-section">
     <div class="container">
       <div class="section-header fade-in">
-        <h2>Proměníme vaši nemovitost v příběh, který zaujme</h2>
-        <p class="section-perex">Vyhněte se vysoké provizi (obvykle 3–6 %), která je skrytě zahrnuta v ceně. Podstatou našich služeb je zvýšit hodnotu vaší nemovitosti tak, aby vydělané peníze skončily u vás, ne v provizích.</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card slide-up">
-          <div class="why-icon">💰</div>
-          <h3>Ušetříte statisíce</h3>
-          <p>Žádné provize 3–6 %. Za fixní cenu dostanete plný servis, který odpovídá výsledkům.</p>
-        </div>
-        <div class="why-card slide-up">
-          <div class="why-icon">📈</div>
-          <h3>Vyšší cena nemovitosti</h3>
-          <p>Profesionální prezentace přiláká vážné zájemce a podpoří vyšší nabídkovou cenu.</p>
-        </div>
-        <div class="why-card slide-up">
-          <div class="why-icon">⚡</div>
-          <h3>Rychlejší prodej</h3>
-          <p>Cílené kampaně na sociálních sítích zkrátí dobu prodeje a maximalizují dosah inzerce.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="sluzby" class="services">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>Co pro vás uděláme</h2>
+        <h2>Proměníme vaši nemovitost v příběh, který zaujme!</h2>
+        <p><strong>Silný online marketing</strong> a tvorba atraktivního vizuálního obsahu jsou klíčem k výhodnějšímu prodeji vaší nemovitosti, a zároveň naší <strong>nejsilnější stránkou</strong>.</p>
+        <p>Vyhněte se vysoké a zbytečné odměně realitním makléřům (obvykle 3–6&nbsp;%), která je často skrytě zahrnuta v ceně, což ji uměle navyšuje, odrazuje kupující a zpomaluje samotný prodej. <strong>Podstatou našich služeb</strong> je zvýšit hodnotu vaší nemovitosti tak, <strong>aby vydělané peníze skončily u vás, ne v provizích</strong>.</p>
       </div>
       <div class="services-grid" id="services-grid"></div>
     </div>
   </section>
 
-  <section id="galerie" class="gallery">
+  <!-- POUTAVÝ VIZUÁLNÍ OBSAH -->
+  <section class="gallery">
     <div class="container">
       <div class="section-header fade-in">
         <h2>Poutavý vizuální obsah</h2>
-        <p class="section-perex">Špičková <strong>videa</strong> a <strong>fotografie</strong> jsou předpokladem každé úspěšné inzerce. Proto díky nám získáte profesionální snímky pořízené těmi <strong>nejlepšími technologiemi</strong>, které zaručují dokonalý barevný rozsah, hloubku detailu a to nejdůležitější – <strong>silný první dojem</strong>.</p>
+        <p>Špičková <strong>videa</strong> a <strong>fotografie</strong> jsou předpokladem každé úspěšné inzerce. Proto díky nám získáte profesionální snímky pořízené těmi <strong>nejlepšími technologiemi</strong>, které zaručují dokonalý barevný rozsah, hloubku detailu a to nejdůležitější – <strong>silný první dojem</strong>.</p>
       </div>
       <div class="photo-slider fade-in">
         <button class="slider-btn slider-btn--prev" id="gallery-prev" aria-label="Předchozí">&#8592;</button>
@@ -124,16 +97,37 @@
       </div>
       <div class="slider-dots" id="gallery-dots"></div>
       <div class="section-cta fade-in">
-        <a href="#kontakt" class="btn btn-primary">Chci objednat</a>
+        <a href="#kontakt" class="btn btn-red btn-pill">Chci objednat</a>
       </div>
     </div>
   </section>
 
+  <!-- HOMESTAGING -->
+  <section class="homestaging">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Homestaging vdechne místnostem život</h2>
+        <p>Chcete vidět, jak bude <strong>prázdná nemovitost</strong> vypadat <strong>s rozmístěným nábytkem</strong>? Víme, jak na to. Vdechneme ji život – <strong>digitálně</strong> a <strong>efektivně</strong>. Virtuální homestaging je nástroj k tomu, abychom vaši nemovitost dokázali zkrášlit, a to bez fyzického stěhování nábytku.</p>
+      </div>
+      <div class="before-after-wrap fade-in">
+        <div class="before-after" id="homestaging-1"></div>
+      </div>
+      <p class="homestaging-text fade-in"><strong>Pomocí vizualizací</strong> přetvoříme prázdnou nebo zastarale zařízenou místnost na <strong>atraktivní, moderně zařízený interiér</strong>. Z holého prostoru uděláme domov.</p>
+      <div class="before-after-wrap fade-in">
+        <div class="before-after" id="homestaging-2"></div>
+      </div>
+      <div class="section-cta fade-in">
+        <a href="#kontakt" class="btn btn-red btn-pill">Chci objednat</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DRONY -->
   <section class="drones">
     <div class="container">
       <div class="section-header fade-in">
         <h2>Dronem pořízené letecké snímky</h2>
-        <p class="section-perex">Ptačí perspektiva ukáže víc než jen dům – přibližuje celý příběh místa.</p>
+        <p>Ptačí perspektiva ukáže víc než jen dům – přibližuje <strong>celý příběh místa</strong>. Díky dronu zachytíme <strong>rozsah pozemku, charakter okolí i dostupnost služeb</strong>. Použitím grafických prvků navíc dokážeme lokalitu přehledně a poutavě odprezentovat.</p>
       </div>
       <div class="photo-slider fade-in">
         <button class="slider-btn slider-btn--prev" id="drones-prev" aria-label="Předchozí">&#8592;</button>
@@ -145,44 +139,104 @@
         <button class="slider-btn slider-btn--next" id="drones-next" aria-label="Další">&#8594;</button>
       </div>
       <div class="slider-dots" id="drones-dots"></div>
+      <div class="section-cta fade-in">
+        <a href="#kontakt" class="btn btn-red btn-pill">Chci objednat</a>
+      </div>
     </div>
   </section>
 
+  <!-- PŮDORYSY -->
+  <section class="pudorysy">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Vizualizace 2D a 3D půdorysů</h2>
+        <p>Půdorysy vám <strong>usnadní orientaci</strong> a pomůžou pochopit, jak je nemovitost uspořádaná. V rámci propagace jsou velmi užitečné, protože <strong>odpoví na otázky</strong> o tom, jak jsou místnosti propojené, a navíc naznačí, jak by se prostor mohl upravit.</p>
+      </div>
+      <div class="photo-slider fade-in">
+        <button class="slider-btn slider-btn--prev" id="pudorysy-prev" aria-label="Předchozí">&#8592;</button>
+        <div class="slider-card">
+          <div class="slider-viewport">
+            <div class="slider-track" id="pudorysy-track"></div>
+          </div>
+        </div>
+        <button class="slider-btn slider-btn--next" id="pudorysy-next" aria-label="Další">&#8594;</button>
+      </div>
+      <div class="slider-dots" id="pudorysy-dots"></div>
+      <div class="section-cta fade-in">
+        <a href="#kontakt" class="btn btn-red btn-pill">Chci objednat</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATTERPORT -->
+  <section class="matterport">
+    <div class="container">
+      <div class="section-header section-header--narrow fade-in">
+        <h2>Interaktivní matterport prohlídka</h2>
+        <p>Jedná se o jeden z nejúčinnějších nástrojů <strong>moderní prezentace nemovitostí</strong>. Zájemce se může volně pohybovat po prostoru, rozhlédnout se do všech stran, přiblížit detaily, měřit vzdálenosti a získat <strong>realistický pocit z dispozice i atmosféry</strong>. To vše z pohodlí svého domova.</p>
+      </div>
+      <div class="section-cta fade-in">
+        <a href="#kontakt" class="btn btn-red btn-pill">Chci objednat</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VÝHODY / PRÁVNÍ SERVIS -->
+  <section id="vyhody" class="legal">
+    <div class="container">
+      <div class="section-header section-header--narrow fade-in">
+        <h2>Kompletní právní a smluvní řešení</h2>
+        <p>My vám přivedeme zájemce o vaši nemovitost, vy si odbavíte prohlídky a vyberete si toho správného kupce, ale co dál? Žádné obavy, jelikož prodej nemovitosti je také o <strong>jistotě</strong>, že celý proces proběhne hladce a <strong>bez komplikací</strong>, spadá pod naše služby rovněž i <strong>smluvní a právní servis</strong>.</p>
+        <p>Vaše nemovitost je pro nás víc než pouhý inzerát, měla by mít svou <strong>vlastní image</strong>. My ji vytvoříme a provedeme vás celým procesem až do úspěšného předání klíčů. Nebudete muset řešit nenasytné realitní makléře, kteří vás berou jen jako jednoho z dalších klientů, od kterého shrábou vysoká procenta z prodejní ceny nemovitosti.</p>
+      </div>
+      <div class="legal-icons fade-in">
+        <div class="legal-icon-card">
+          <div class="legal-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <p>Využijeme vlastní know-how, abychom zvýšili cenu prodávané nemovitosti</p>
+        </div>
+        <div class="legal-icon-card">
+          <div class="legal-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.55 2 2 0 0 1 3.6 1.37h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.95-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          </div>
+          <p>Kreativním a moderním realitním marketingem dokážeme přilákat vážné zájemce</p>
+        </div>
+        <div class="legal-icon-card">
+          <div class="legal-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <p>Ve výsledku zrychlíme proces prodeje a tím ušetříme váš drahocenný čas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONLINE MARKETING + LANDING PAGE -->
   <section class="marketing">
-    <div class="container marketing-inner">
-      <div class="marketing-text fade-in">
+    <div class="container">
+      <div class="section-header section-header--narrow fade-in">
         <h2>Online marketing na míru</h2>
-        <p>Nabízíme správu a optimalizaci reklamních kampaní na Facebooku, Instagramu, Youtube a dalších sociálních sítích. Díky přesnému cílení oslovíme potenciální kupce přímo podle jejich zájmů a lokality.</p>
-        <div class="marketing-highlight">
-          Vlastní Facebookové skupiny s více než <strong>300 000 uživatelů</strong>
-        </div>
-        <div class="marketing-channels">
-          <span class="channel-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</span>
-          <span class="channel-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</span>
-          <span class="channel-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</span>
-        </div>
+        <p>Nabízíme správu a optimalizaci reklamních kampaní na <strong>Facebooku, Instagramu, Youtube a dalších sociálních sítích</strong>. Díky přesnému cílení oslovíme potenciální kupce přímo podle jejich zájmů a lokality, čímž maximalizujeme <strong>dosah</strong> a <strong>efektivitu</strong>. Pravidelně sledujeme výsledky kampaní a podle potřeby je upravujeme, aby vaše nabídka byla vidět <strong>správným zájemcům</strong> a ve <strong>správný čas</strong>.</p>
+        <p>Kromě toho se opíráme také o podporu vlastních <strong>Facebookových skupin</strong> (například bezmakléřská <a href="https://www.facebook.com/profile.php?id=61579084846986" target="_blank" rel="noopener" class="text-link">realitní – zde</a>, <a href="https://www.facebook.com/profile.php?id=61579084846986" target="_blank" rel="noopener" class="text-link">podnikatelská – zde</a>, <a href="https://www.facebook.com/profile.php?id=61579084846986" target="_blank" rel="noopener" class="text-link">fotografická – zde</a>), ve kterých sdružujeme dohromady <strong>přes 300 000 uživatelů</strong>.</p>
       </div>
-      <div class="marketing-stats fade-in">
-        <div class="marketing-stat">
-          <span class="stat-number">300 000+</span>
-          <span class="stat-label">sledujících na soc. sítích</span>
-        </div>
-        <div class="marketing-stat">
-          <span class="stat-number">3–6 %</span>
-          <span class="stat-label">provize ušetříte</span>
-        </div>
-        <div class="marketing-stat">
-          <span class="stat-number">100+</span>
-          <span class="stat-label">spokojených klientů</span>
-        </div>
+      <div class="section-header section-header--narrow fade-in" style="margin-top:4rem">
+        <h2>Vlastní landing page</h2>
+        <p>Na <strong>unikátní webové stránce</strong> vaší nemovitosti odprezentujeme zájemcům <strong>všechny důležité informace</strong> (kompletní popis nemovitosti, foto, video, půdorysy, vizualizace, cenu, kontakt pro prohlídky a další důležité náležitosti, které zájemce <strong>upoutají</strong> a zároveň jim <strong>pomohou v rozhodování</strong>).</p>
+        <p>Jedná se o moderní a praxí ověřený způsob, jak vaši nemovitost co nejlépe <strong>představit</strong> a <strong>zvýšit zájem potenciálních kupců</strong>. Zároveň vám můžeme garantovat, že díky kampaním na sociálních sítích přivedeme na vaši landing page <strong>relevantní zájemce</strong>.</p>
+      </div>
+      <div class="section-cta fade-in">
+        <a href="#kontakt" class="btn btn-red btn-pill">Chci objednat</a>
       </div>
     </div>
   </section>
 
+  <!-- REFERENCE -->
   <section id="reference" class="reviews">
     <div class="container">
       <div class="section-header fade-in">
-        <h2>Co říkají naši klienti</h2>
+        <h2>Reference a vaše zpětná vazba</h2>
+        <p class="section-perex">Spokojenost klientů považujeme za měřítko úspěchu. Každou zakázku bereme osobně, ať už jde o prodej <strong>rodinného domu, bytu, komerčního prostoru, louky, garáže</strong> nebo například <strong>stavebního pozemku</strong>.</p>
       </div>
       <div class="reviews-wrapper">
         <button class="reviews-btn reviews-btn--prev" id="reviews-prev" aria-label="Předchozí">&#8592;</button>
@@ -195,66 +249,43 @@
     </div>
   </section>
 
-  <section class="pricing">
+  <!-- CENA + KONTAKT -->
+  <section id="kontakt" class="pricing-contact">
     <div class="container">
-      <div class="section-header section-header--light fade-in">
-        <h2>Jak je to s cenou?</h2>
-        <p class="section-perex">My se vám za desetitisíce postaráme o atraktivní prezentaci nemovitosti, a vy nemusíte kalkulovat se statisícovou provizí.</p>
-      </div>
-      <div class="pricing-card fade-in">
-        <div class="pricing-name">Standardní balíček</div>
-        <ul class="pricing-includes">
-          <li>Video interiéru a exteriéru</li>
-          <li>Profesionální fotografie</li>
-          <li>Vlastní web nemovitosti</li>
-          <li>Reklamní kampaně na soc. sítích</li>
-        </ul>
-        <div class="pricing-price">od 40 000 Kč</div>
-        <p class="pricing-note">Finální kalkulace se vždy odvíjí od dispozic nemovitosti a individuálních potřeb</p>
-        <a href="#kontakt" class="btn btn-gold">Nezávazná poptávka</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="kontakt" class="contact">
-    <div class="container contact-inner">
-      <div class="contact-info fade-in">
-        <h2>Pojďme spolupracovat</h2>
-        <ul class="contact-details">
-          <li><span class="contact-icon">📞</span><a href="tel:+420602516031">+420 602 516 031</a></li>
-          <li><span class="contact-icon">✉️</span><a href="mailto:martin.gottvald@bezmakleri.cz">martin.gottvald@bezmakleri.cz</a></li>
-          <li><span class="contact-icon">🏢</span><span>BEZMAKLÉŘI s.r.o.</span></li>
-        </ul>
-        <div class="social-links">
-          <a href="https://www.facebook.com/profile.php?id=61579084846986" target="_blank" rel="noopener" aria-label="Facebook" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="https://instagram.com/realpromo.cz" target="_blank" rel="noopener" aria-label="Instagram" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-          <a href="https://www.youtube.com/channel/UCAn0D2KPFFOLC_MJQJZw8Ww" target="_blank" rel="noopener" aria-label="YouTube" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-          <a href="https://www.tiktok.com/@realpromocz" target="_blank" rel="noopener" aria-label="TikTok" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
-          <a href="https://www.linkedin.com/in/real-promo-98b99b388/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <div class="section-header fade-in">
+        <h2>Jak je to s cenou našich služeb?</h2>
+        <p>Pointa vzájemné spolupráce vychází z <strong>ověřené praxe</strong> – my se vám <strong>za desetitisíce</strong> postaráme o atraktivní prezentaci nemovitosti a následnou propagaci, a vy nemusíte kalkulovat <strong>se statisícovou provizí realitním makléřům</strong>.</p>
+        <p><strong>Standardní balíček</strong>, který doporučujeme a obsahuje <strong>video, foto, vlastní web nemovitosti</strong> a <strong>reklamní kampaně</strong> na sociálních sítích, <strong>startuje na 40&nbsp;000&nbsp;Kč</strong>. Finální kalkulace se vždy odvíjí od dispozic nemovitosti, vašich <strong>individuálních potřeb</strong>, požadavků a časové osy.</p>
+        <p>Pro nastartování vzájemné spolupráce stačí jeden <strong>nezávazný email</strong>, <strong>telefonní hovor</strong> nebo zanechaný vzkaz přes <strong>kontaktní formulář</strong>.</p>
+        <div class="contact-info-line">
+          <a href="tel:+420602516031" class="contact-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.55 2 2 0 0 1 3.6 1.37h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.95-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+            +420 602 516 031
+          </a>
+          <a href="mailto:martin.gottvald@bezmakleri.cz" class="contact-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            martin.gottvald@bezmakleri.cz
+          </a>
         </div>
       </div>
       <div class="contact-form-wrap fade-in">
         <form class="contact-form" id="contact-form" novalidate>
           <div class="form-group">
-            <label for="name">Jméno *</label>
-            <input type="text" id="name" name="name" required placeholder="Vaše jméno" />
+            <input type="text" id="name" name="name" required placeholder="Jméno *" />
             <span class="form-error" id="name-error"></span>
           </div>
           <div class="form-group">
-            <label for="phone">Telefon *</label>
-            <input type="tel" id="phone" name="phone" required placeholder="+420 XXX XXX XXX" />
+            <input type="tel" id="phone" name="phone" required placeholder="Telefon *" />
             <span class="form-error" id="phone-error"></span>
           </div>
           <div class="form-group">
-            <label for="email">E-mail *</label>
-            <input type="email" id="email" name="email" required placeholder="vas@email.cz" />
+            <input type="email" id="email" name="email" required placeholder="E-mail *" />
             <span class="form-error" id="email-error"></span>
           </div>
           <div class="form-group">
-            <label for="message">Zpráva</label>
-            <textarea id="message" name="message" rows="4" placeholder="Popis nemovitosti, lokalita, dotazy..."></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Napište nám ..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">Odeslat poptávku</button>
+          <button type="submit" class="btn btn-red btn-full">Odeslat</button>
           <div class="form-success" id="form-success">
             <span>✓</span> Děkujeme! Ozve se vám Martin do 24 hodin.
           </div>
@@ -263,26 +294,19 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="#uvod" class="logo-link">
-          <img src="assets/logo/logo.webp" alt="Bezmakléři" class="logo-img logo-img--white" width="44" height="40" />
-          <div class="logo-text">
-            <span class="logo-main">BEZMAKLÉŘI</span>
-            <span class="logo-sub">bez provizí</span>
-          </div>
-        </a>
-        <p class="footer-copy">© 2026 BEZMAKLÉŘI s.r.o.</p>
+        <span class="footer-check">✓</span>
+        <span class="footer-name">BEZMAKLÉŘI s.r.o.</span>
       </div>
-      <div class="footer-links">
-        <a href="#">Ochrana osobních údajů</a>
-        <a href="#">Zásady cookies</a>
-      </div>
-      <div class="social-links footer-social">
-        <a href="https://www.facebook.com/profile.php?id=61579084846986" target="_blank" rel="noopener" aria-label="Facebook" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-        <a href="https://instagram.com/realpromo.cz" target="_blank" rel="noopener" aria-label="Instagram" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        <a href="https://www.youtube.com/channel/UCAn0D2KPFFOLC_MJQJZw8Ww" target="_blank" rel="noopener" aria-label="YouTube" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61579084846986" target="_blank" rel="noopener" aria-label="Facebook" class="social-link social-link--fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://instagram.com/realpromo.cz" target="_blank" rel="noopener" aria-label="Instagram" class="social-link social-link--ig"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UCAn0D2KPFFOLC_MJQJZw8Ww" target="_blank" rel="noopener" aria-label="YouTube" class="social-link social-link--yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://www.tiktok.com/@realpromocz" target="_blank" rel="noopener" aria-label="TikTok" class="social-link social-link--tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        <a href="https://www.linkedin.com/in/real-promo-98b99b388/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link social-link--li"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
       </div>
     </div>
   </footer>

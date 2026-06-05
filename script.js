@@ -1,20 +1,21 @@
 'use strict';
 
 const services = [
-  { icon: '🎬', name: 'Videa interiéru a exteriéru', desc: 'Profesionální video prezentace, která ukáže vaši nemovitost v tom nejlepším světle.' },
-  { icon: '📷', name: 'Fotografické služby', desc: 'Špičkové snímky pořízené nejlepšími technologiemi s dokonalým barevným rozsahem.' },
-  { icon: '📱', name: 'Kampaně na sociálních sítích', desc: 'Cílená reklama na Facebooku, Instagramu a YouTube – oslovíme správné kupce.' },
-  { icon: '🌐', name: 'Vlastní web nemovitosti', desc: 'Unikátní landing page s kompletní prezentací vaší nemovitosti.' },
-  { icon: '📐', name: 'Vizualizace 2D a 3D půdorysů', desc: 'Přehledné půdorysy, které zájemcům usnadní orientaci a rozhodování.' },
-  { icon: '🛋️', name: 'Virtuální homestaging', desc: 'Digitálně zariadíme prázdné místnosti – bez fyzického stěhování nábytku.' },
-  { icon: '🔮', name: 'Matterport prohlídky', desc: 'Interaktivní 3D prohlídka z pohodlí domova zájemce.' },
-  { icon: '⚖️', name: 'Právní a smluvní servis', desc: 'Kompletní právní pokrytí celého procesu prodeje.' },
-  { icon: '💎', name: 'Stanovení ceny nemovitosti', desc: 'Odborné ocenění, které maximalizuje výtěžek z prodeje.' },
+  { icon: '🎬', name: 'Videa interiéru a exteriéru', bg: 'assets/drony/bezmakleri-dron-01.webp' },
+  { icon: '📷', name: 'Fotografické služby', bg: 'assets/foto/bezmakleri-interier-01.webp' },
+  { icon: '📱', name: 'Kampaně na sociálních sítích', bg: 'assets/drony/bezmakleri-dron-02.webp' },
+  { icon: '🌐', name: 'Vlastní web prodávané nemovitosti', bg: 'assets/foto/bezmakleri-interier-02.webp' },
+  { icon: '📐', name: 'Vizualizace 2D a 3D půdorysů', bg: 'assets/drony/bezmakleri-dron-03.webp' },
+  { icon: '🛋️', name: 'Virtuální homestaging', bg: 'assets/foto/bezmakleri-interier-03.webp' },
+  { icon: '🔮', name: 'Matterport prohlídky', bg: 'assets/drony/bezmakleri-dron-04.webp' },
+  { icon: '⚖️', name: 'Právní a smluvní servis', bg: 'assets/drony/bezmakleri-dron-05.webp' },
+  { icon: '💎', name: 'Stanovení ceny nemovitosti', bg: 'assets/drony/bezmakleri-dron-06.webp' },
 ];
 
 const references = [
+  { name: 'Lenka Nováková', city: 'Vizovice', rating: 5, text: 'Jsem alergický na realitní makléře a jejich praktiky. Proto jsem hledal alternativu a díky bohu našel Bezmakléře. Budu je doporučovat dál.' },
   { name: 'Petr Juráň', city: 'Brno', rating: 5, text: 'Spolupráce mi ušetřila hodiny práce. Nemusel jsem nijak řešit focení, video ani ladění prezentace. Radši dám někomu 70 000 Kč za veškerý servis, než po prodeji proplácet statisícové provize realitce.' },
-  { name: 'Luboš Hladílek', city: 'Mikulov', rating: 5, text: 'Hledali jsme partnera, který pochopí náš projekt a umí ho vizuálně odprezentovat. Dostali jsme nejen krásné vizualizace a videa, ale i nápady, jak celkově zlepšit promo. Spolupráce byla profesionální, rychlá a přínosná.' },
+  { name: 'Luboš Hladílek', city: 'Mikulov', rating: 4, text: 'Hledali jsme partnera, který pochopí náš projekt a umí ho vizuálně odprezentovat tak, aby zaujal koncové zákazníky i investory. Dostali jsme nejen krásné vizualizace a videa, ale i nápady, jak celkově zlepšit promo. Spolupráce byla profesionální, rychlá a přínosná. Rádi se vrátíme znovu.' },
   { name: 'Michaela Králová', city: 'Břeclav', rating: 5, text: 'Nevěděla jsem, jak svůj byt nejlépe nafotit a odprezentovat. Díky pomoci Bezmakléřů jsem měla během pár dní stylové fotky, krátké video i 3D prohlídku. O byt byl zájem hned od začátku a nakonec se prodal za cenu, kterou jsem si přála.' },
   { name: 'Patrik Šustr', city: 'Hodonín', rating: 5, text: 'Prodej domu byl pro nás velký krok. Oceňujeme, že nám kluci zajistili právní servis včetně kontroly smluv. Celý proces byl přehledný, rychlý a bezpečný.' },
   { name: 'Berenika Matějovská', city: 'Vsetín', rating: 5, text: 'Prodávala jsem na Vsetínsku starší chalupu na samotě a bála se, že to bude běh na dlouhou trať. Vše se ale obrátilo – ukázalo se, jak krásné a klidné místo to je. Díky reklamním kampaním na sociálních sítích.' },
@@ -24,14 +25,13 @@ const references = [
   { name: 'Roman Buczek', city: 'Mohelnice', rating: 5, text: 'Prodával jsem krásnou chatu v Mohelnici. Myslel jsem si, že to půjde samo, ale realita mě nemile překvapila. Zabraly až reklamní kampaně, do kterých nevidím a pomohli mi Bezmakléři.' },
   { name: 'Marie Kvapilová', city: 'Podivín', rating: 5, text: 'Nejdřív jsem počítal s tím, že odevzdám 200 000 Kč provizi realitce. Nakonec jsem se obrátil na Bezmakléře a za měsíc bylo prodáno. S mou investicí 50 000 Kč. Děkuju za to.' },
   { name: 'Marek Vyrůbalík', city: 'Rajhrad', rating: 5, text: 'Fajn domluva. Fajn realizace. Co slíbili, to splnili.' },
-  { name: 'Lenka Nováková', city: 'Vizovice', rating: 5, text: 'Jsem alergický na realitní makléře a jejich praktiky. Proto jsem hledal alternativu a díky bohu našel Bezmakléře. Budu je doporučovat dál.' },
 ];
 
 const galleryImages = [
   { src: 'assets/foto/bezmakleri-interier-01.webp', alt: 'Profesionální fotografie interiéru nemovitosti' },
   { src: 'assets/foto/bezmakleri-interier-02.webp', alt: 'Profesionální fotografie obývacího pokoje' },
   { src: 'assets/foto/bezmakleri-interier-03.webp', alt: 'Foto interiéru nemovitosti' },
-  { src: 'assets/foto/bezmakleri-interier-04.webp', alt: 'Foto nemovitosti – Hodonín' },
+  { src: 'assets/foto/bezmakleri-interier-04.webp', alt: 'Foto nemovitosti' },
   { src: 'assets/foto/bezmakleri-interier-05.webp', alt: 'Interiér nemovitosti – obývací pokoj' },
   { src: 'assets/foto/bezmakleri-interier-06.webp', alt: 'Interiér nemovitosti – kuchyň' },
   { src: 'assets/foto/bezmakleri-interier-07.webp', alt: 'Interiér nemovitosti – chodba' },
@@ -64,6 +64,17 @@ const droneImages = [
   { src: 'assets/drony/bezmakleri-dron-12.webp', alt: 'Dronový pohled – okolí nemovitosti' },
   { src: 'assets/drony/bezmakleri-dron-13.webp', alt: 'Letecký snímek z dronu' },
   { src: 'assets/drony/bezmakleri-dron-14.webp', alt: 'Dronový snímek nemovitosti' },
+];
+
+const pudorysyImages = [
+  { src: 'assets/pudorysy/hod_pud-reaqp8sionlnvqr9r2pakkiwmvv9qt3rq6g2fom91c.png', alt: 'Vizualizace 2D půdorysu nemovitosti' },
+  { src: 'assets/pudorysy/hod_pud-reaqp8sionlnvqr9r2pakkiwmvv9qt3rq6g2fom91c-2.png', alt: 'Vizualizace 3D půdorysu nemovitosti' },
+  { src: 'assets/pudorysy/RADEGAST_INDEX_1080x1350-1-re7jpd8882f7n25qq39dbr4p6esldn2wvow7k4urls.png', alt: 'Půdorys nemovitosti – 2D plán' },
+  { src: 'assets/pudorysy/RADEGAST_INDEX_1080x1350-1-re7jpd8882f7n25qq39dbr4p6esldn2wvow7k4urls-2.png', alt: 'Půdorys nemovitosti – alternativní pohled' },
+  { src: 'assets/pudorysy/RADEGAST_INDEX_1080x1350-1-re7jpd8882f7n25qq39dbr4p6esldn2wvow7k4urls-3.png', alt: 'Půdorys nemovitosti – 3D vizualizace' },
+  { src: 'assets/pudorysy/s-nabytkem-otoceno-reaqq0zodoo9k1mb6ew3ndeqgg0a5q7pu20mtzgfuo.png', alt: 'Půdorys s rozmístěným nábytkem' },
+  { src: 'assets/pudorysy/Screenshot-2025-10-29-155607-1-re7jodid0d2bdvlmintjp056lron95542s3rbmbq68.png', alt: 'Půdorys nemovitosti' },
+  { src: 'assets/pudorysy/Screenshot-2025-10-29-155708-1-re7jndshsnpf4p1ib8dq295o14kp4n7b9vbb33soqo.png', alt: 'Dispozice nemovitosti – půdorys' },
 ];
 
 /* ── Lightbox ── */
@@ -103,27 +114,33 @@ function moveLightbox(dir) {
 function renderServices() {
   const grid = document.getElementById('services-grid');
   services.forEach(s => {
-    const el = document.createElement('div');
-    el.className = 'service-card fade-in';
-    el.innerHTML = `<div class="service-icon">${s.icon}</div><h3>${s.name}</h3><p>${s.desc}</p>`;
-    grid.appendChild(el);
+    const item = document.createElement('div');
+    item.className = 'service-item fade-in';
+    item.innerHTML = `
+      <div class="service-tile">
+        <div class="service-tile-bg" style="background-image:url('${s.bg}')"></div>
+        <div class="service-tile-icon">${s.icon}</div>
+      </div>
+      <h3>${s.name}</h3>`;
+    grid.appendChild(item);
   });
 }
 
-/* ── Photo slider (gallery + drones) ── */
-function createSlider({ trackId, prevId, nextId, dotsId, images }) {
+/* ── Photo slider ── */
+function createSlider({ trackId, prevId, nextId, dotsId, images, lightbox = true }) {
   const track = document.getElementById(trackId);
   const dotsEl = document.getElementById(dotsId);
+  if (!track || !dotsEl) return;
   const startIdx = allImages.length;
   const GAP = 16;
   let offset = 0;
 
   images.forEach((img, i) => {
-    allImages.push(img);
+    if (lightbox) allImages.push(img);
     const slide = document.createElement('div');
     slide.className = 'slider-slide';
     slide.innerHTML = `<img src="${img.src}" alt="${img.alt}" loading="lazy" />`;
-    slide.addEventListener('click', () => openLightbox(startIdx + i));
+    if (lightbox) slide.addEventListener('click', () => openLightbox(startIdx + i));
     track.appendChild(slide);
 
     const dot = document.createElement('button');
@@ -155,8 +172,46 @@ function createSlider({ trackId, prevId, nextId, dotsId, images }) {
   document.getElementById(nextId).addEventListener('click', () => goTo(offset + 1));
   window.addEventListener('resize', () => goTo(offset), { passive: true });
   window.addEventListener('load', () => goTo(0), { once: true });
-
   goTo(0);
+}
+
+/* ── Before/After slider ── */
+function initBeforeAfter(containerId, beforeSrc, afterSrc, beforeAlt, afterAlt) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  container.innerHTML = `
+    <div class="ba-inner">
+      <img class="ba-after" src="${afterSrc}" alt="${afterAlt}" />
+      <div class="ba-before-wrap">
+        <img class="ba-before" src="${beforeSrc}" alt="${beforeAlt}" />
+      </div>
+      <div class="ba-handle">
+        <div class="ba-handle-btn">&#8249;&#8250;</div>
+      </div>
+    </div>`;
+
+  const handle = container.querySelector('.ba-handle');
+  const beforeWrap = container.querySelector('.ba-before-wrap');
+  const inner = container.querySelector('.ba-inner');
+  let dragging = false;
+
+  function setPos(x) {
+    const rect = inner.getBoundingClientRect();
+    const pct = Math.max(2, Math.min(98, ((x - rect.left) / rect.width) * 100));
+    handle.style.left = pct + '%';
+    beforeWrap.style.width = pct + '%';
+  }
+
+  handle.addEventListener('mousedown', e => { dragging = true; e.preventDefault(); });
+  handle.addEventListener('touchstart', () => { dragging = true; }, { passive: true });
+  document.addEventListener('mouseup', () => { dragging = false; });
+  document.addEventListener('touchend', () => { dragging = false; });
+  document.addEventListener('mousemove', e => { if (dragging) setPos(e.clientX); });
+  document.addEventListener('touchmove', e => { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
+
+  setPos(inner.getBoundingClientRect().left + inner.getBoundingClientRect().width / 2);
+  window.addEventListener('load', () => setPos(inner.getBoundingClientRect().left + inner.getBoundingClientRect().width / 2), { once: true });
 }
 
 /* ── Reviews carousel ── */
@@ -164,7 +219,7 @@ let reviewsOffset = 0;
 
 function getCardWidth() {
   const card = document.querySelector('.review-card');
-  if (!card) return 364;
+  if (!card) return 344;
   return card.offsetWidth + 24;
 }
 
@@ -175,10 +230,10 @@ function renderReviews() {
     const card = document.createElement('div');
     card.className = 'review-card';
     card.innerHTML = `
-      <div class="review-stars">${'★'.repeat(r.rating)}</div>
-      <p class="review-text">"${r.text}"</p>
       <div class="review-author">${r.name}</div>
-      <div class="review-city">${r.city}</div>`;
+      <div class="review-stars">${'★'.repeat(r.rating)}</div>
+      <div class="review-city">${r.city}</div>
+      <p class="review-text">„${r.text}"</p>`;
     track.appendChild(card);
 
     const dot = document.createElement('button');
@@ -204,7 +259,7 @@ function goToReview(idx) {
   document.getElementById('reviews-next').disabled = reviewsOffset >= max;
 }
 
-/* ── Navbar scroll ── */
+/* ── Navbar ── */
 function initNavbar() {
   const nb = document.getElementById('navbar');
   const onScroll = () => nb.classList.toggle('scrolled', window.scrollY > 50);
@@ -232,15 +287,14 @@ function initHamburger() {
 function initScrollAnimations() {
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-in, .slide-up').forEach(el => obs.observe(el));
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 }
 
 /* ── Scroll spy ── */
 function initScrollSpy() {
   const sections = ['uvod', 'sluzby', 'vyhody', 'reference', 'kontakt'];
   const navLinks = document.querySelectorAll('.nav-links a');
-
   function update() {
     const navH = document.getElementById('navbar').offsetHeight + 60;
     let active = 'uvod';
@@ -250,7 +304,6 @@ function initScrollSpy() {
     });
     navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + active));
   }
-
   window.addEventListener('scroll', update, { passive: true });
   update();
 }
@@ -263,11 +316,9 @@ function initContactForm() {
     { id: 'phone', errId: 'phone-error', msg: 'Zadejte prosím telefonní číslo.' },
     { id: 'email', errId: 'email-error', msg: 'Zadejte prosím platný e-mail.' },
   ];
-
   form.addEventListener('submit', e => {
     e.preventDefault();
     let valid = true;
-
     fields.forEach(f => {
       const input = document.getElementById(f.id);
       const errEl = document.getElementById(f.errId);
@@ -277,9 +328,7 @@ function initContactForm() {
       errEl.textContent = ok ? '' : f.msg;
       if (!ok) valid = false;
     });
-
     if (valid) {
-      console.log('Poptávka:', { name: form.name.value, phone: form.phone.value, email: form.email.value, message: form.message.value });
       form.reset();
       const success = document.getElementById('form-success');
       success.classList.add('visible');
@@ -291,8 +340,26 @@ function initContactForm() {
 /* ── Init ── */
 document.addEventListener('DOMContentLoaded', () => {
   renderServices();
+
   createSlider({ trackId: 'gallery-track', prevId: 'gallery-prev', nextId: 'gallery-next', dotsId: 'gallery-dots', images: galleryImages });
   createSlider({ trackId: 'drones-track', prevId: 'drones-prev', nextId: 'drones-next', dotsId: 'drones-dots', images: droneImages });
+  createSlider({ trackId: 'pudorysy-track', prevId: 'pudorysy-prev', nextId: 'pudorysy-next', dotsId: 'pudorysy-dots', images: pudorysyImages, lightbox: false });
+
+  initBeforeAfter(
+    'homestaging-1',
+    'assets/foto/bezmakleri-interier-04.webp',
+    'assets/foto/bezmakleri-interier-01.webp',
+    'Před homestagingem',
+    'Po homestagingu'
+  );
+  initBeforeAfter(
+    'homestaging-2',
+    'assets/foto/bezmakleri-interier-08.webp',
+    'assets/foto/bezmakleri-interier-02.webp',
+    'Před homestagingem',
+    'Po homestagingu'
+  );
+
   renderReviews();
 
   initNavbar();
@@ -301,7 +368,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initContactForm();
 
-  /* Lightbox events */
   document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
   document.getElementById('lightbox-prev').addEventListener('click', () => moveLightbox(-1));
   document.getElementById('lightbox-next').addEventListener('click', () => moveLightbox(1));
@@ -315,16 +381,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowRight') moveLightbox(1);
   });
 
-  /* Reviews nav buttons */
   document.getElementById('reviews-prev').addEventListener('click', () => goToReview(reviewsOffset - 1));
   document.getElementById('reviews-next').addEventListener('click', () => goToReview(reviewsOffset + 1));
   goToReview(0);
 
-  /* Re-observe dynamically added .fade-in elements */
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-in, .slide-up').forEach(el => {
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => {
     if (!el.classList.contains('visible')) obs.observe(el);
   });
 });
