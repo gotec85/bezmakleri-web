@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prodej domu 7+kk (165m²) se zahradou – Těšany u Brna</title>
+  <meta name="description" content="Prodej rodinného domu 7+kk (165 m²) se zahradou v Těšanech u Brna. Novostavba 2022, 2 patra, dvougenerační bydlení. Cena: 14 500 000 Kč." />
+  <link rel="canonical" href="https://www.bezmakleri.cz/tesany" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', system-ui, sans-serif; color: #1a1a1a; background: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font: inherit; }
+
+    :root {
+      --red: #CC1111;
+      --red-dark: #AA0E0E;
+      --soft: #EBEBEB;
+      --border: #DDDDDD;
+      --muted: #555;
+      --navbar-h: 68px;
+      --pad: clamp(1rem, 5vw, 3rem);
+      --radius: 8px;
+      --radius-lg: 16px;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--pad); }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--navbar-h); background: #fff;
+      box-shadow: 0 1px 12px rgba(0,0,0,0.08);
+    }
+    .navbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: var(--navbar-h); gap: 1.5rem;
+    }
+    .logo-link { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .logo-img { width: 36px; height: 33px; object-fit: contain; }
+    .logo-brand { font-size: 16px; font-weight: 700; color: #1a1a1a; letter-spacing: 0.04em; }
+    .nav-contact { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .nav-contact-item {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-size: 14px; font-weight: 600; color: #1a1a1a;
+    }
+    .nav-contact-item svg { width: 15px; height: 15px; color: var(--red); flex-shrink: 0; }
+    .btn-pill {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 22px; border-radius: 100px;
+      background: var(--red); color: #fff;
+      font-family: inherit; font-size: 14px; font-weight: 600;
+      border: none; cursor: pointer; transition: background 0.3s;
+      white-space: nowrap;
+    }
+    .btn-pill:hover { background: var(--red-dark); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #1a1a1a; border-radius: 2px; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh; position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: calc(var(--navbar-h) + 2rem) 0 4rem;
+      background: #333;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('assets/tesany/hero.webp') center/cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      text-align: center; color: #fff;
+    }
+    .hero-content h1 {
+      font-size: clamp(1.8rem, 5vw, 3.5rem);
+      font-weight: 700; line-height: 1.15; margin-bottom: 0.6rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .hero-location {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 600; margin-bottom: 1.75rem; opacity: 0.92;
+    }
+    .price-badge {
+      display: inline-flex; align-items: center;
+      background: var(--red); color: #fff;
+      padding: 12px 28px; border-radius: 100px;
+      font-size: 1.1rem; font-weight: 700;
+    }
+
+    /* ── SECTIONS ── */
+    .section { padding: 5rem 0; }
+    .section--soft { background: var(--soft); }
+    .section--white { background: #fff; }
+    .section-header { text-align: center; max-width: 820px; margin: 0 auto 3rem; }
+    .section-header h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 1.25rem; line-height: 1.25; }
+    .section-header p { font-size: 1rem; color: #1a1a1a; line-height: 1.8; margin-bottom: 0.75rem; }
+    .section-header p:last-child { margin-bottom: 0; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── PHOTO SLIDER ── */
+    .photo-slider {
+      display: flex; align-items: center; gap: 1rem;
+      width: 100vw; position: relative;
+      left: 50%; margin-left: -50vw;
+      padding: 0 3.5rem;
+    }
+    .slider-card {
+      flex: 1; min-width: 0; background: #fff;
+      border-radius: var(--radius-lg); padding: 1.25rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+    .slider-viewport { overflow: hidden; border-radius: var(--radius); width: 100%; }
+    .slider-track {
+      display: grid; grid-auto-flow: column;
+      grid-auto-columns: calc(50% - 0.5rem);
+      gap: 1rem;
+      transition: transform 0.4s ease; will-change: transform;
+    }
+    .slider-slide { aspect-ratio: 3/2; border-radius: var(--radius); overflow: hidden; background: #ddd; cursor: pointer; }
+    .slider-slide img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+    .slider-slide:hover img { transform: scale(1.03); }
+    .slider-placeholder { width: 100%; height: 100%; background: #d0d0d0; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; color: #888; }
+    .slider-btn {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: #1a1a1a; color: #fff; font-size: 1.2rem;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      transition: background 0.3s;
+    }
+    .slider-btn:hover { background: var(--red); }
+    .slider-btn:disabled { opacity: 0.25; pointer-events: none; }
+    .slider-dots { display: flex; justify-content: center; gap: 7px; margin-top: 1.25rem; }
+    .slider-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--border); cursor: pointer; border: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .slider-dot.active { background: var(--red); transform: scale(1.4); }
+
+    /* ── YOUTUBE ── */
+    .video-wrap {
+      max-width: 860px; margin: 0 auto;
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    }
+    .video-wrap iframe { display: block; width: 100%; aspect-ratio: 16/9; border: none; }
+
+    /* ── CONTACT ── */
+    .contact-section { background: var(--soft); padding: 5rem 0; }
+    .contact-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+    .contact-inner h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 1rem; }
+    .contact-inner .lead { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 2.5rem; }
+    .contact-phone {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--red); color: #fff;
+      padding: 14px 32px; border-radius: 100px;
+      font-size: 1.1rem; font-weight: 700; margin-bottom: 1.75rem;
+      transition: background 0.3s;
+    }
+    .contact-phone:hover { background: var(--red-dark); }
+    .contact-phone svg { width: 20px; height: 20px; }
+    .contact-email {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 0.5rem; margin-bottom: 2.5rem; color: #1a1a1a;
+    }
+    .contact-email svg { width: 36px; height: 36px; color: #888; }
+    .contact-email span { font-size: 1rem; font-weight: 600; }
+    .contact-form { text-align: left; }
+    .form-group { margin-bottom: 0.9rem; }
+    .form-group input, .form-group textarea {
+      width: 100%; padding: 12px 14px;
+      border: 1.5px solid var(--border); border-radius: var(--radius);
+      font-family: inherit; font-size: 0.95rem; color: #1a1a1a;
+      background: #fff; transition: border-color 0.3s; resize: vertical;
+    }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #1a1a1a; }
+    .form-group input.error, .form-group textarea.error { border-color: #e53e3e; }
+    .form-error { display: block; font-size: 0.78rem; color: #e53e3e; margin-top: 0.2rem; min-height: 1em; }
+    .btn-submit {
+      width: 100%; padding: 14px; border-radius: var(--radius);
+      background: #1a1a1a; color: #fff;
+      font-family: inherit; font-size: 1rem; font-weight: 600;
+      cursor: pointer; border: none; transition: background 0.3s;
+    }
+    .btn-submit:hover { background: #333; }
+    .form-success {
+      display: none; margin-top: 1rem; padding: 1rem;
+      background: #f0fff4; border: 1px solid #9ae6b4;
+      border-radius: var(--radius); color: #276749; font-size: 0.93rem; text-align: center;
+    }
+    .form-success.visible { display: block; }
+
+    /* ── MAP ── */
+    .map-section { background: var(--soft); padding-bottom: 0; }
+    .map-wrap { width: 100%; height: 380px; overflow: hidden; }
+    .map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .slider-track { grid-auto-columns: calc(50% - 0.5rem); }
+      .photo-slider { padding: 0 2.5rem; }
+      .nav-contact .nav-contact-item:last-of-type { display: none; }
+    }
+    @media (max-width: 640px) {
+      .nav-contact { display: none; }
+      .hamburger { display: flex; }
+      .slider-track { grid-auto-columns: 100%; }
+      .photo-slider { padding: 0 1.5rem; }
+      .slider-btn { width: 36px; height: 36px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo/logo.webp" alt="Bezmakléři" class="logo-img" width="36" height="33" />
+        <span class="logo-brand">BEZMAKLÉŘI</span>
+      </a>
+      <div class="nav-contact">
+        <div class="nav-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          Jiří Grulich
+        </div>
+        <a href="tel:+420724865833" class="nav-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.55 2 2 0 0 1 3.6 1.37h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.95-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          724 865 833
+        </a>
+        <a href="mailto:jiri.grulich@realpromo.cz" class="nav-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          jiri.grulich@realpromo.cz
+        </a>
+      </div>
+      <a href="#kontakt" class="btn-pill">Kontakt</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content fade-in">
+      <h1>Prodej domu 7+kk (165m²) se zahradou</h1>
+      <p class="hero-location">Těšany u Brna</p>
+      <div>
+        <span class="price-badge">Cena: 14 500 000,- Kč</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TĚŠANY -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Těšany? Místo, kde se dobře bydlí a ještě lépe žije</h2>
+        <p>Těšany jsou jihomoravskou klasikou. <strong>Malebná obec v tradičním kraji</strong> – se vším, co k životu potřebujete – a navíc na dosah Brna. Tato <strong>novostavba</strong> v původní zástavbě centra obce byla <strong>zkolaudovaná v roce 2022</strong> a má <strong>2 patra</strong> s podlahovou plochou o velikosti <strong>165m²</strong>. Nabízí také možnost <strong>dvougeneračního bydlení</strong>.</p>
+      </div>
+      <div class="photo-slider fade-in">
+        <button class="slider-btn" id="interier-prev">&#8592;</button>
+        <div class="slider-card">
+          <div class="slider-viewport">
+            <div class="slider-track" id="interier-track"></div>
+          </div>
+        </div>
+        <button class="slider-btn" id="interier-next">&#8594;</button>
+      </div>
+      <div class="slider-dots" id="interier-dots"></div>
+    </div>
+  </section>
+
+  <!-- MATERIÁLY -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Důraz na použití kvalitních materiálů a vybavení</h2>
+        <p><strong>Chcete důkaz, že tady se rozhodně nešetřilo?</strong> Použité cihly Porotherm 44 T Profi v tloušťce 440 mm s minerální izolací, nadstandardní tepelně-izolační vlastnosti, nízké provozní náklady, plastová okna s trojskly od německé firmy Salamander, střecha izolovaná PUR pěnou, bezúdržbové a úsporné vytápění od české firmy Fenix Jeseník nebo bojler Dražice 200l.</p>
+      </div>
+      <div class="photo-slider fade-in">
+        <button class="slider-btn" id="materialy-prev">&#8592;</button>
+        <div class="slider-card">
+          <div class="slider-viewport">
+            <div class="slider-track" id="materialy-track"></div>
+          </div>
+        </div>
+        <button class="slider-btn" id="materialy-next">&#8594;</button>
+      </div>
+      <div class="slider-dots" id="materialy-dots"></div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Domov (i láska) na první pohled</h2>
+        <p>Do tohoto domu se prostě zamilujete a <strong>následující video</strong> vás o tom přesvědčí. Od vstupu přes jednotlivé pokoje až po zahradu. <strong>Usnadní vám rozhodování i představu</strong> o vašem budoucím bydlení.</p>
+      </div>
+      <div class="video-wrap fade-in">
+        <iframe src="https://www.youtube.com/embed/uN-X7uDyoGA" title="Prodej domu 7+kk (165m²) se zahradou: Těšany u Brna" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- PŮDORYSY -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Půdorysy a dispozice</h2>
+        <p>Přehledné <strong>2D a 3D vizualizace</strong> půdorysů vám pomohou pochopit dispozici každého patra. Dům nabízí prostorné místnosti a promyšlené rozvržení pro pohodlné každodenní bydlení.</p>
+      </div>
+      <div class="photo-slider fade-in">
+        <button class="slider-btn" id="pudorysy-prev">&#8592;</button>
+        <div class="slider-card">
+          <div class="slider-viewport">
+            <div class="slider-track" id="pudorysy-track"></div>
+          </div>
+        </div>
+        <button class="slider-btn" id="pudorysy-next">&#8594;</button>
+      </div>
+      <div class="slider-dots" id="pudorysy-dots"></div>
+    </div>
+  </section>
+
+  <!-- ZAHRADA -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Zahrada s obrovským potenciálem</h2>
+        <p>Rovinatý rozlehlý plac nabízí <strong>dostatek prostoru pro relaxaci i praktické využití</strong>. Díky své velikosti poskytuje potenciál pro vybudování <strong>pergoly</strong>, venkovního <strong>posezení</strong>, <strong>bazénu</strong>, <strong>dětského koutku</strong> nebo například <strong>přístřešku pro auto</strong>. Noví majitelé si zde mohou vytvořit místo přesně podle svých představ – ať už pro <strong>odpočinek, rodinné aktivity</strong> nebo další <strong>rozvoj pozemku</strong>.</p>
+      </div>
+      <div class="photo-slider fade-in">
+        <button class="slider-btn" id="zahrada-prev">&#8592;</button>
+        <div class="slider-card">
+          <div class="slider-viewport">
+            <div class="slider-track" id="zahrada-track"></div>
+          </div>
+        </div>
+        <button class="slider-btn" id="zahrada-next">&#8594;</button>
+      </div>
+      <div class="slider-dots" id="zahrada-dots"></div>
+    </div>
+  </section>
+
+  <!-- VIZUALIZACE -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Vizualizace pro podporu vaší představivosti</h2>
+        <p>Následující návrhy ukazují možné ambice celé nemovitosti. Prostory (zejména obývací pokoj s kuchyňským koutem o velikosti 49m²) jsou navrženy s důrazem na <strong>moderní</strong> a <strong>vzdušné bydlení</strong>. Díky úpravám si lze snadno představit, jak může dům <strong>po rekonstrukci</strong> či <strong>doladění</strong> působit.</p>
+      </div>
+      <div class="photo-slider fade-in">
+        <button class="slider-btn" id="vizualizace-prev">&#8592;</button>
+        <div class="slider-card">
+          <div class="slider-viewport">
+            <div class="slider-track" id="vizualizace-track"></div>
+          </div>
+        </div>
+        <button class="slider-btn" id="vizualizace-next">&#8594;</button>
+      </div>
+      <div class="slider-dots" id="vizualizace-dots"></div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="contact-section" id="kontakt">
+    <div class="container contact-inner fade-in">
+      <h2>Máte dotaz či rovnou zájem o prohlídku?</h2>
+      <p class="lead">Jsme rádi, že vás tento <strong>atraktivní těšanský dům</strong> zaujal. Pro <strong>další informace</strong> vám poslouží následující <strong>kontaktní údaje</strong>.</p>
+      <div>
+        <a href="tel:+420724865833" class="contact-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.55 2 2 0 0 1 3.6 1.37h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.95-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          724 865 833
+        </a>
+      </div>
+      <div class="contact-email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>jiri.grulich@realpromo.cz</span>
+      </div>
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-group">
+          <input type="text" id="name" name="name" required placeholder="Jméno *" />
+          <span class="form-error" id="name-error"></span>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" name="phone" required placeholder="Telefon *" />
+          <span class="form-error" id="phone-error"></span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" required placeholder="E-mail *" />
+          <span class="form-error" id="email-error"></span>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" rows="5" placeholder="Napište nám ... *"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Odeslat</button>
+        <div class="form-success" id="form-success">
+          <span>✓</span> Děkujeme! Ozveme se vám co nejdříve.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section class="map-section">
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.8!2d16.7!3d49.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712f0b0b0b0b0b0%3A0x0!2sT%C4%9B%C5%A1any+457%2C+664+54+T%C4%9B%C5%A1any!5e0!3m2!1scs!2scz!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa – Těšany 457"></iframe>
+    </div>
+  </section>
+
+  <script>
+    'use strict';
+
+    // ── Photo data (doplň cesty po nahrání fotek do assets/tesany/) ──
+    const photos = {
+      interier: [
+        { src: 'assets/tesany/interier-01.webp', alt: 'Interiér domu – obývací pokoj' },
+        { src: 'assets/tesany/interier-02.webp', alt: 'Interiér domu – kuchyň' },
+        { src: 'assets/tesany/interier-03.webp', alt: 'Interiér domu – ložnice' },
+        { src: 'assets/tesany/interier-04.webp', alt: 'Interiér domu – dětský pokoj' },
+        { src: 'assets/tesany/interier-05.webp', alt: 'Interiér domu – koupelna' },
+        { src: 'assets/tesany/interier-06.webp', alt: 'Interiér domu – druhé patro' },
+        { src: 'assets/tesany/interier-07.webp', alt: 'Interiér domu – chodba' },
+        { src: 'assets/tesany/interier-08.webp', alt: 'Interiér domu – detail' },
+      ],
+      materialy: [
+        { src: 'assets/tesany/materialy-01.webp', alt: 'Kvalitní materiály – podlahy' },
+        { src: 'assets/tesany/materialy-02.webp', alt: 'Kvalitní materiály – okna' },
+        { src: 'assets/tesany/materialy-03.webp', alt: 'Kvalitní materiály – koupelna' },
+        { src: 'assets/tesany/materialy-04.webp', alt: 'Kvalitní materiály – detail' },
+        { src: 'assets/tesany/materialy-05.webp', alt: 'Kvalitní materiály – vytápění' },
+        { src: 'assets/tesany/materialy-06.webp', alt: 'Kvalitní materiály – střecha' },
+        { src: 'assets/tesany/materialy-07.webp', alt: 'Kvalitní materiály – fasáda' },
+      ],
+      pudorysy: [
+        { src: 'assets/tesany/pudorys-1p-2d.webp', alt: 'Půdorys 1. patra – 2D plán' },
+        { src: 'assets/tesany/pudorys-1p-3d.webp', alt: 'Půdorys 1. patra – 3D vizualizace' },
+        { src: 'assets/tesany/pudorys-2p-2d.webp', alt: 'Půdorys 2. patra – 2D plán' },
+        { src: 'assets/tesany/pudorys-2p-3d.webp', alt: 'Půdorys 2. patra – 3D vizualizace' },
+      ],
+      zahrada: [
+        { src: 'assets/tesany/zahrada-01.webp', alt: 'Zahrada domu – pohled 1' },
+        { src: 'assets/tesany/zahrada-02.webp', alt: 'Zahrada domu – pohled 2' },
+        { src: 'assets/tesany/zahrada-03.webp', alt: 'Zahrada domu – pohled 3' },
+        { src: 'assets/tesany/zahrada-04.webp', alt: 'Zahrada domu – pohled 4' },
+        { src: 'assets/tesany/zahrada-05.webp', alt: 'Zahrada domu – pohled 5' },
+        { src: 'assets/tesany/zahrada-06.webp', alt: 'Zahrada domu – pohled 6' },
+        { src: 'assets/tesany/zahrada-07.webp', alt: 'Zahrada domu – pohled 7' },
+        { src: 'assets/tesany/zahrada-08.webp', alt: 'Zahrada domu – pohled 8' },
+      ],
+      vizualizace: [
+        { src: 'assets/tesany/vizualizace-01.webp', alt: 'Vizualizace – kuchyň' },
+        { src: 'assets/tesany/vizualizace-02.webp', alt: 'Vizualizace – zahrada' },
+        { src: 'assets/tesany/vizualizace-03.webp', alt: 'Vizualizace – obývací pokoj' },
+        { src: 'assets/tesany/vizualizace-04.webp', alt: 'Vizualizace – exteriér' },
+      ],
+    };
+
+    // ── Slider ──
+    function createSlider(trackId, prevId, nextId, dotsId, images) {
+      const track = document.getElementById(trackId);
+      const dotsEl = document.getElementById(dotsId);
+      if (!track || !dotsEl) return;
+      const GAP = 16;
+      let offset = 0;
+
+      images.forEach((img, i) => {
+        const slide = document.createElement('div');
+        slide.className = 'slider-slide';
+        const el = document.createElement('img');
+        el.src = img.src; el.alt = img.alt; el.loading = 'lazy';
+        el.onerror = () => { slide.innerHTML = `<div class="slider-placeholder">${img.alt}</div>`; };
+        slide.appendChild(el);
+        track.appendChild(slide);
+
+        const dot = document.createElement('button');
+        dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Snímek ${i + 1}`);
+        dot.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(dot);
+      });
+
+      function perVisible() { return window.innerWidth <= 640 ? 1 : 2; }
+      function getStep() {
+        const s = track.querySelector('.slider-slide');
+        return s ? s.offsetWidth + GAP : 0;
+      }
+      function goTo(idx) {
+        const per = perVisible();
+        const max = Math.max(0, images.length - per);
+        offset = Math.max(0, Math.min(max, idx));
+        const step = getStep();
+        if (step > 0) track.style.transform = `translateX(-${offset * step}px)`;
+        dotsEl.querySelectorAll('.slider-dot').forEach((d, i) => d.classList.toggle('active', i === offset));
+        document.getElementById(prevId).disabled = offset <= 0;
+        document.getElementById(nextId).disabled = offset >= max;
+      }
+      document.getElementById(prevId).addEventListener('click', () => goTo(offset - 1));
+      document.getElementById(nextId).addEventListener('click', () => goTo(offset + 1));
+      window.addEventListener('resize', () => goTo(offset), { passive: true });
+      window.addEventListener('load', () => goTo(0), { once: true });
+      goTo(0);
+    }
+
+    // ── Scroll animations ──
+    function initAnimations() {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+      document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    }
+
+    // ── Contact form ──
+    function initForm() {
+      const form = document.getElementById('contact-form');
+      const fields = [
+        { id: 'name', errId: 'name-error', msg: 'Zadejte prosím jméno.' },
+        { id: 'phone', errId: 'phone-error', msg: 'Zadejte prosím telefon.' },
+        { id: 'email', errId: 'email-error', msg: 'Zadejte platný e-mail.' },
+      ];
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        let valid = true;
+        fields.forEach(f => {
+          const input = document.getElementById(f.id);
+          const errEl = document.getElementById(f.errId);
+          let ok = input.value.trim() !== '';
+          if (f.id === 'email' && ok) ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
+          input.classList.toggle('error', !ok);
+          errEl.textContent = ok ? '' : f.msg;
+          if (!ok) valid = false;
+        });
+        if (valid) {
+          form.reset();
+          const s = document.getElementById('form-success');
+          s.classList.add('visible');
+          setTimeout(() => s.classList.remove('visible'), 6000);
+        }
+      });
+    }
+
+    // ── Init ──
+    document.addEventListener('DOMContentLoaded', () => {
+      createSlider('interier-track', 'interier-prev', 'interier-next', 'interier-dots', photos.interier);
+      createSlider('materialy-track', 'materialy-prev', 'materialy-next', 'materialy-dots', photos.materialy);
+      createSlider('pudorysy-track', 'pudorysy-prev', 'pudorysy-next', 'pudorysy-dots', photos.pudorysy);
+      createSlider('zahrada-track', 'zahrada-prev', 'zahrada-next', 'zahrada-dots', photos.zahrada);
+      createSlider('vizualizace-track', 'vizualizace-prev', 'vizualizace-next', 'vizualizace-dots', photos.vizualizace);
+      initAnimations();
+      initForm();
+    });
+  </script>
+</body>
+</html>
