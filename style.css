@@ -386,8 +386,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 @media (max-width: 768px) {
   :root { --navbar-h: 64px; }
-  .hero-video { display: none; }
-  .hero { background-image: url('assets/foto/hero.webp'); background-size: cover; background-position: center; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .nav-links.open {
