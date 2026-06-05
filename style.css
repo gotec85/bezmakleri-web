@@ -189,7 +189,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .drones { background: var(--color-bg-soft); padding: 5rem 0; }
 .pudorysy { background: var(--color-bg-soft); padding: 5rem 0; }
 
-.photo-slider { display: flex; align-items: center; gap: 1rem; }
+.photo-slider {
+  display: flex; align-items: center; gap: 1rem;
+  width: 100vw; position: relative;
+  left: 50%; margin-left: -50vw;
+  padding: 0 3.5rem;
+}
 .slider-card {
   flex: 1; min-width: 0;
   background: #fff; border-radius: var(--radius-lg);
@@ -199,7 +204,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .slider-viewport { overflow: hidden; border-radius: var(--radius); width: 100%; }
 .slider-track {
   display: grid; grid-auto-flow: column;
-  grid-auto-columns: calc(50% - 0.5rem);
+  grid-auto-columns: calc(33.333% - 0.75rem);
   gap: 1rem;
   transition: transform 0.4s ease; will-change: transform;
 }
@@ -381,6 +386,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .slider-track { grid-auto-columns: calc(50% - 0.5rem); }
+  .photo-slider { padding: 0 2.5rem; }
+}
+
 @media (max-width: 768px) {
   :root { --navbar-h: 64px; }
   .nav-links { display: none; }

@@ -265,7 +265,11 @@ function createSlider({ trackId, prevId, nextId, dotsId, images, lightbox = true
     dotsEl.appendChild(dot);
   });
 
-  function perVisible() { return window.innerWidth <= 480 ? 1 : 2; }
+  function perVisible() {
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 900) return 2;
+    return 3;
+  }
 
   function getStep() {
     const slide = track.querySelector('.slider-slide');
