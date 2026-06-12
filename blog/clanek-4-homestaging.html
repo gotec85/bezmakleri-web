@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homestaging — co to je a proč zvyšuje cenu nemovitosti | Bezmakléři</title>
+  <meta name="description" content="Homestaging připraví nemovitost tak, aby zaujala víc kupců. Vysvětlíme, co to je, kolik stojí a jaký je rozdíl mezi fyzickým a virtuálním." />
+  <link rel="canonical" href="https://www.bezmakleri.cz/blog/clanek-4-homestaging" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .article-hero {
+      padding: calc(var(--navbar-h) + 3rem) 0 2.5rem;
+      background: var(--color-bg-soft);
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+    }
+    .article-tag {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--color-red);
+      background: rgba(204,17,17,0.08); padding: 4px 10px; border-radius: 100px;
+    }
+    .article-date { font-size: 0.85rem; color: var(--color-muted); }
+    .article-hero h1 {
+      font-size: clamp(1.7rem, 4vw, 2.8rem);
+      font-weight: 700; line-height: 1.2; max-width: 760px;
+    }
+    .article-hero .perex {
+      font-size: 1.1rem; color: var(--color-muted);
+      line-height: 1.75; max-width: 700px; margin-top: 1rem;
+    }
+    .article-cover {
+      width: 100%; aspect-ratio: 21/9; object-fit: cover;
+      border-radius: var(--radius-lg); margin: 2.5rem 0 0;
+      display: block;
+    }
+
+    .article-body {
+      max-width: 760px; margin: 0 auto;
+      padding: 3rem 0 5rem;
+      font-size: 1.05rem; line-height: 1.85; color: var(--color-text);
+    }
+    .article-body p { margin-bottom: 1.4rem; }
+    .article-body h2 {
+      font-size: 1.4rem; font-weight: 700; margin: 2.5rem 0 0.75rem;
+      line-height: 1.25; color: var(--color-text);
+    }
+    .article-body .tip-box {
+      background: rgba(204,17,17,0.06);
+      border-left: 3px solid var(--color-red);
+      padding: 1rem 1.25rem; border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 1.5rem 0;
+    }
+    .article-body .tip-box p { margin-bottom: 0; }
+    .article-body .tip-box strong { color: var(--color-red); }
+
+    .compare-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.25rem; margin: 1.5rem 0 2rem;
+    }
+    .compare-card {
+      background: var(--color-bg-soft);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.25rem;
+    }
+    .compare-card h3 {
+      font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem;
+      color: var(--color-text);
+    }
+    .compare-card p { font-size: 0.9rem; color: var(--color-muted); margin-bottom: 0; line-height: 1.65; }
+
+    .article-cta {
+      background: var(--color-bg-soft); border-radius: var(--radius-lg);
+      padding: 2.5rem; text-align: center; margin-top: 3rem;
+    }
+    .article-cta h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; }
+    .article-cta p { font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1.5rem; }
+
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.9rem; font-weight: 600; color: var(--color-muted);
+      margin-bottom: 1.5rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--color-red); }
+
+    .related-links {
+      margin-top: 2rem; padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.9rem; color: var(--color-muted);
+    }
+    .related-links a {
+      color: var(--color-red); font-weight: 600;
+      text-decoration: none;
+    }
+    .related-links a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .article-hero { padding-top: calc(var(--navbar-h) + 2rem); padding-bottom: 1.5rem; }
+      .article-body { padding: 2rem 0 3.5rem; font-size: 1rem; }
+      .article-cta { padding: 1.75rem 1.25rem; }
+      .article-cover { aspect-ratio: 16/9; border-radius: var(--radius); }
+      .compare-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo-link">
+        <img src="../assets/logo/logo.webp" alt="Bezmakléři" class="logo-img" width="80" height="59" />
+        <span class="logo-main">BEZMAKLÉŘI</span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="../index.html">Úvod</a>
+        <a href="../index.html#sluzby">Služby</a>
+        <a href="../index.html#vyhody">Výhody</a>
+        <a href="../blog.html" class="active">Blog</a>
+        <a href="../index.html#kontakt">Kontakt</a>
+      </nav>
+      <div class="navbar-cta">
+        <a href="../index.html#kontakt" class="btn btn-red btn-pill">Nezávazná poptávka služeb</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <a href="../blog.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
+        Zpět na blog
+      </a>
+      <div class="article-meta">
+        <span class="article-tag">Homestaging</span>
+        <span class="article-date">12. 6. 2026</span>
+      </div>
+      <h1>Homestaging: co to je a proč zvyšuje prodejní cenu</h1>
+      <p class="perex">Příprava nemovitosti tak, aby na fotkách i při prohlídce zapůsobila na co nejvíc kupujících — a tím se prodala rychleji a za lepší cenu.</p>
+      <img src="../assets/foto/bezmakleri-interier-05.webp" alt="Homestaging — připravený interiér nemovitosti na prodej" class="article-cover" loading="eager" />
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article>
+    <div class="container">
+      <div class="article-body">
+
+        <p>Možná jste pojem homestaging zaslechli, ale nejste si jistí, co přesně znamená a jestli se vyplatí. Ve zkratce: je to příprava nemovitosti tak, aby na fotkách i při prohlídce zapůsobila na co nejvíc kupujících — a tím se prodala rychleji a za lepší cenu.</p>
+
+        <h2>Co je homestaging</h2>
+        <p>Homestaging je „aranžování" nemovitosti na prodej. Nejde o rekonstrukci, ale o úpravu vzhledu: odosobnění prostoru, doplnění vhodného nábytku a dekorací, sladění barev a vytvoření atmosféry, do které se kupující snadno vžije. Cílem je, aby si při prohlídce řekl „tady bych chtěl bydlet", ne „tohle budu muset celé předělat".</p>
+
+        <h2>Proč funguje</h2>
+        <p>Kupující se rozhodují emocemi a ty pak obhajují rozumem. Prázdný nebo přeplněný byt působí menší a méně lákavě. Hezky připravený prostor vypadá větší, světlejší a hodnotnější — a kupující jsou za něj ochotni nabídnout víc. Připravená nemovitost se zpravidla prodává rychleji, což taky šetří peníze (méně měsíců placení hypotéky či energií „navíc").</p>
+
+        <h2>Fyzický vs. virtuální homestaging</h2>
+
+        <div class="compare-grid">
+          <div class="compare-card">
+            <h3>Fyzický homestaging</h3>
+            <p>Do prostoru se reálně doveze nábytek a dekorace. Působivý při prohlídkách, ale dražší a pracnější — vyžaduje koordinaci dodání, instalace a odvozu nábytku.</p>
+          </div>
+          <div class="compare-card">
+            <h3>Virtuální homestaging</h3>
+            <p>Zařízení se doplní digitálně přímo do fotek. Prázdný byt tak na inzerátu vypadá zařízeně a útulně bez stěhování čehokoli. Levnější, rychlá a dnes velmi populární varianta pro online inzerci.</p>
+          </div>
+        </div>
+
+        <h2>Pro koho se hodí</h2>
+        <p>Homestaging dává největší smysl u prázdných bytů, zastarale zařízených nemovitostí a u prostorů, které se na fotkách „nedají dobře přečíst". I drobná úprava často znamená rozdíl mezi inzerátem, který lidé přeskočí, a tím, na který kliknou.</p>
+
+        <div class="tip-box">
+          <p><strong>Tip:</strong> U online inzerce bývá nejúčinnější kombinace profesionálního focení a virtuálního homestagingu — kupující vidí potenciál prostoru hned na první fotce.</p>
+        </div>
+
+        <h2>Závěr</h2>
+        <p>Homestaging není zbytečný luxus, ale nástroj, který se obvykle vrátí na vyšší prodejní ceně a kratší době prodeje. Zvlášť virtuální varianta je dostupná pro skoro každou nemovitost.</p>
+        <p>My v Bezmakléřích nabízíme virtuální homestaging jako součást prezentace nemovitosti.</p>
+
+        <div class="article-cta">
+          <h3>Zajímá vás virtuální homestaging?</h3>
+          <p>Napište si o nezávaznou nabídku služeb. Stačí jeden e-mail nebo telefonát.</p>
+          <a href="../index.html#kontakt" class="btn btn-red btn-pill">Nezávazná poptávka</a>
+        </div>
+
+        <div class="related-links">
+          Další čtení:
+          <a href="clanek-3-jak-nafotit-nemovitost.html">Jak nafotit nemovitost na prodej</a>
+          &nbsp;·&nbsp;
+          <a href="jak-prodat-nemovitost-bez-realitky.html">Jak prodat nemovitost bez realitky — kompletní návod</a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('mobile-open');
+        hamburger.setAttribute('aria-expanded', open);
+      });
+      document.addEventListener('click', e => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+          navLinks.classList.remove('mobile-open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
