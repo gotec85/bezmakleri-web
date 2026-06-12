@@ -7,7 +7,7 @@
   --color-muted: #555555;
   --color-border: #DDDDDD;
   --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
-  --navbar-h: 72px;
+  --navbar-h: 96px;
   --container-max: 1100px;
   --pad: clamp(1rem, 5vw, 3rem);
   --radius: 8px;
@@ -40,8 +40,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .text-link:hover { color: #0d4fa0; }
 
 /* ── Section headers ── */
-.section-header { text-align: center; max-width: 760px; margin: 0 auto 3rem; }
-.section-header--narrow { max-width: 680px; }
+.section-header { text-align: center; max-width: 960px; margin: 0 auto 3rem; }
+.section-header--narrow { max-width: 960px; }
 .section-header h2 {
   font-size: clamp(1.6rem, 3.5vw, 2.2rem);
   font-weight: 700; color: var(--color-text); line-height: 1.25; margin-bottom: 1.25rem;
@@ -63,11 +63,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   height: var(--navbar-h);
 }
 .logo-link { display: flex; align-items: center; gap: 10px; }
-.logo-img { width: 44px; height: 40px; object-fit: contain; }
-.logo-main { font-size: 18px; font-weight: 700; color: var(--color-text); letter-spacing: 0.04em; }
-.nav-links { display: flex; align-items: center; gap: 2rem; }
+.logo-img { width: 80px; height: 59px; object-fit: contain; }
+.logo-main { display: none; }
+.nav-links { display: flex; align-items: center; gap: 3rem; }
 .nav-links a {
-  font-size: 14px; font-weight: 600; color: var(--color-text);
+  font-size: 13px; font-weight: 600; color: var(--color-text);
+  text-transform: uppercase; letter-spacing: 0.08em;
   transition: color var(--ease); position: relative; padding-top: 6px;
 }
 .nav-links a::before {
@@ -128,16 +129,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .service-tile-bg {
   position: absolute; inset: 0;
   background-size: cover; background-position: center;
-  filter: grayscale(100%);
-}
-.service-tile-icon {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  z-index: 1;
-}
-.service-tile-icon svg {
-  width: 65%; max-width: 130px; height: auto;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
 }
 .service-item h3 {
   margin-top: 0.75rem; font-size: 0.95rem; font-weight: 500;
@@ -150,7 +141,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ── HOMESTAGING ── */
 .homestaging { background: var(--color-bg); padding: 5rem 0; }
 .homestaging-text {
-  text-align: center; max-width: 680px; margin: 2.5rem auto;
+  text-align: center; max-width: 960px; margin: 2.5rem auto;
   font-size: 1rem; line-height: 1.75; color: var(--color-text);
 }
 .before-after-wrap {
@@ -201,7 +192,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   padding: 1.25rem;
   box-shadow: 0 2px 16px rgba(0,0,0,0.06);
 }
-.slider-viewport { overflow: hidden; border-radius: var(--radius); width: 100%; }
+.slider-viewport { overflow: hidden; border-radius: var(--radius); width: 100%; touch-action: pan-y; }
 .slider-track {
   display: grid; grid-auto-flow: column;
   grid-auto-columns: calc(33.333% - 0.75rem);
@@ -260,11 +251,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .legal-icon-card p { font-size: 0.92rem; color: var(--color-text); line-height: 1.6; }
 
 /* ── MARKETING ── */
-.marketing { background: var(--color-bg); padding: 5rem 0; }
+.marketing { background: var(--color-bg); padding: 5rem 0 2.5rem; }
 
 /* ── NAŠE PRÁCE ── */
-.nase-prace { background: var(--color-bg); padding: 5rem 0; }
+.nase-prace { background: var(--color-bg); padding: 2.5rem 0 5rem; }
 .prace-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.prace-grid .prace-card:only-child { grid-column: 2; }
 .prace-card {
   border-radius: var(--radius-lg); overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: block;
@@ -299,9 +291,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 @media (max-width: 480px) { .prace-grid { grid-template-columns: 1fr; } }
 
 /* ── REVIEWS ── */
-.reviews { background: var(--color-bg-soft); padding: 5rem 0; }
+.reviews { background: var(--color-bg); padding: 5rem 0; }
 .reviews-wrapper { display: flex; align-items: center; gap: 1rem; }
-.reviews-viewport { flex: 1; overflow: hidden; }
+.reviews-viewport { flex: 1; overflow: hidden; touch-action: pan-y; }
 .reviews-track { display: flex; gap: 1.5rem; transition: transform 0.4s ease; will-change: transform; }
 .review-card {
   width: 320px; min-width: 320px; background: #fff;
@@ -330,7 +322,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 /* ── PRICING + CONTACT ── */
 .pricing-contact { background: var(--color-bg-soft); padding: 5rem 0; }
-.pricing-contact .section-header { max-width: 680px; }
+.pricing-contact .section-header { max-width: 960px; }
 .contact-info-line {
   display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;
   margin-top: 1.5rem;
@@ -445,6 +437,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .review-card { min-width: 260px; }
   .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
   .contact-info-line { flex-direction: column; align-items: center; gap: 0.75rem; }
+  .services-section, .gallery, .homestaging, .drones, .pudorysy,
+  .matterport, .legal, .marketing, .nase-prace, .reviews, .pricing-contact { padding: 3.5rem 0; }
+  .section-header { margin-bottom: 2rem; }
+  .contact-form-wrap { padding: 1.5rem; }
 }
 
 @media (max-width: 480px) {
@@ -452,6 +448,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .slider-track { grid-auto-columns: 100%; }
   .hero-actions { flex-direction: column; align-items: center; }
   .hero-actions .btn { width: 100%; max-width: 320px; }
-  .review-card { min-width: 240px; }
   .before-after-wrap { padding: 0.75rem; }
+  .services-section, .gallery, .homestaging, .drones, .pudorysy,
+  .matterport, .legal, .marketing, .nase-prace, .reviews, .pricing-contact { padding: 2.5rem 0; }
+  .photo-slider { padding: 0 0.5rem; gap: 0.5rem; }
+  .slider-btn { width: 36px; height: 36px; font-size: 1rem; }
+  .slider-card { padding: 0.75rem; }
+  .review-card { min-width: calc(100vw - 130px); }
+  .reviews-wrapper { gap: 0.5rem; }
+  .reviews-btn { width: 36px; height: 36px; }
+  .hero { padding-bottom: 3rem; }
+  .section-header h2 { font-size: 1.5rem; }
 }

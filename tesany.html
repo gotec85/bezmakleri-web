@@ -43,8 +43,8 @@
       height: var(--navbar-h); gap: 1.5rem;
     }
     .logo-link { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-    .logo-img { width: 36px; height: 33px; object-fit: contain; }
-    .logo-brand { font-size: 16px; font-weight: 700; color: #1a1a1a; letter-spacing: 0.04em; }
+    .logo-img { width: 74px; height: 54px; object-fit: contain; }
+    .logo-brand { display: none; }
     .nav-contact { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
     .nav-contact-item {
       display: flex; align-items: center; gap: 0.4rem;
@@ -189,11 +189,11 @@
     .form-error { display: block; font-size: 0.78rem; color: #e53e3e; margin-top: 0.2rem; min-height: 1em; }
     .btn-submit {
       width: 100%; padding: 14px; border-radius: var(--radius);
-      background: #1a1a1a; color: #fff;
+      background: var(--red); color: #fff;
       font-family: inherit; font-size: 1rem; font-weight: 600;
       cursor: pointer; border: none; transition: background 0.3s;
     }
-    .btn-submit:hover { background: #333; }
+    .btn-submit:hover { background: var(--red-dark); }
     .form-success {
       display: none; margin-top: 1rem; padding: 1rem;
       background: #f0fff4; border: 1px solid #9ae6b4;
@@ -227,21 +227,17 @@
   <nav class="navbar">
     <div class="container navbar-inner">
       <a href="index.html" class="logo-link">
-        <img src="assets/logo/logo.webp" alt="Bezmakléři" class="logo-img" width="36" height="33" />
+        <img src="assets/logo/logo.webp" alt="Bezmakléři" class="logo-img" width="74" height="54" />
         <span class="logo-brand">BEZMAKLÉŘI</span>
       </a>
       <div class="nav-contact">
         <div class="nav-contact-item">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-          Jiří Grulich
+          Petr Blažek
         </div>
-        <a href="tel:+420724865833" class="nav-contact-item">
+        <a href="tel:+420731548236" class="nav-contact-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.55 2 2 0 0 1 3.6 1.37h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.95-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-          724 865 833
-        </a>
-        <a href="mailto:jiri.grulich@realpromo.cz" class="nav-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          jiri.grulich@realpromo.cz
+          731 548 236
         </a>
       </div>
       <a href="#kontakt" class="btn-pill">Kontakt</a>
@@ -312,7 +308,7 @@
         <p>Do tohoto domu se prostě zamilujete a <strong>následující video</strong> vás o tom přesvědčí. Od vstupu přes jednotlivé pokoje až po zahradu. <strong>Usnadní vám rozhodování i představu</strong> o vašem budoucím bydlení.</p>
       </div>
       <div class="video-wrap fade-in">
-        <iframe src="https://www.youtube.com/embed/uN-X7uDyoGA" title="Prodej domu 7+kk (165m²) se zahradou: Těšany u Brna" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/uN-X7uDyoGA?rel=0&origin=https://www.bezmakleri.cz" title="Prodej domu 7+kk (165m²) se zahradou: Těšany u Brna" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </div>
   </section>
@@ -383,14 +379,10 @@
       <h2>Máte dotaz či rovnou zájem o prohlídku?</h2>
       <p class="lead">Jsme rádi, že vás tento <strong>atraktivní těšanský dům</strong> zaujal. Pro <strong>další informace</strong> vám poslouží následující <strong>kontaktní údaje</strong>.</p>
       <div>
-        <a href="tel:+420724865833" class="contact-phone">
+        <a href="tel:+420731548236" class="contact-phone">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.55 2 2 0 0 1 3.6 1.37h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.95-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-          724 865 833
+          731 548 236
         </a>
-      </div>
-      <div class="contact-email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        <span>jiri.grulich@realpromo.cz</span>
       </div>
       <form class="contact-form" id="contact-form" novalidate>
         <div class="form-group">
@@ -429,45 +421,42 @@
     // ── Photo data (doplň cesty po nahrání fotek do assets/tesany/) ──
     const photos = {
       interier: [
-        { src: 'assets/tesany/interier-01.webp', alt: 'Interiér domu – obývací pokoj' },
-        { src: 'assets/tesany/interier-02.webp', alt: 'Interiér domu – kuchyň' },
-        { src: 'assets/tesany/interier-03.webp', alt: 'Interiér domu – ložnice' },
-        { src: 'assets/tesany/interier-04.webp', alt: 'Interiér domu – dětský pokoj' },
-        { src: 'assets/tesany/interier-05.webp', alt: 'Interiér domu – koupelna' },
-        { src: 'assets/tesany/interier-06.webp', alt: 'Interiér domu – druhé patro' },
-        { src: 'assets/tesany/interier-07.webp', alt: 'Interiér domu – chodba' },
-        { src: 'assets/tesany/interier-08.webp', alt: 'Interiér domu – detail' },
+        { src: 'assets/tesany/part%201%20slajdy/hf_20260525_102433_496c1bc6-ecb2-404b-9b68-6b6b4a484366-ro7tjkq7eh1t596zj0dqwc4wglbs7hnohlkygsayaa.jpg', alt: 'Interiér nemovitosti' },
+        { src: 'assets/tesany/part%201%20slajdy/hf_20260525_104212_570632de-c81d-4a20-826a-67871017d522-ro7tkwnz30vfld9cr33pxi1er8ri41xzo6upxwbvgy.jpg', alt: 'Interiér nemovitosti' },
+        { src: 'assets/tesany/part%201%20slajdy/hf_20260525_104911_de459c83-0136-48de-9c13-b9d0b8ce6eaa-ro7tlcn8b7hb2qm55s0dlw08uskqqwpfedxz3lo6j6.jpg', alt: 'Interiér nemovitosti' },
+        { src: 'assets/tesany/part%201%20slajdy/hf_20260525_105442_177edd88-4dfb-4e18-bd5d-37658ebb1984-ro7tltkbq84gvpxkezbnurqjjq9clgklgpopqkz3f6.jpg', alt: 'Interiér nemovitosti' },
+        { src: 'assets/tesany/part%201%20slajdy/IMG_3075-rnxva2v5ivclzxiyuhw0jh4215fzvkhpkx4sjxjtaq.jpeg', alt: 'Interiér nemovitosti' },
+        { src: 'assets/tesany/part%201%20slajdy/IMG_3087-rnxvcnx6bgvzxbrsr442wbmouapc1lr4xppv2bpu6q.jpeg', alt: 'Interiér nemovitosti' },
+        { src: 'assets/tesany/part%201%20slajdy/IMG_3089-rnxvdokvq0a6i4ajt1yj3kdo0bondsso2r5ss47hg2.jpeg', alt: 'Interiér nemovitosti' },
+        { src: 'assets/tesany/part%201%20slajdy/IMG_3092-rnxvencwqvlsfow15yzq5tlpzkx8almqjjarjcrx1u.jpeg', alt: 'Interiér nemovitosti' },
       ],
       materialy: [
-        { src: 'assets/tesany/materialy-01.webp', alt: 'Kvalitní materiály – podlahy' },
-        { src: 'assets/tesany/materialy-02.webp', alt: 'Kvalitní materiály – okna' },
-        { src: 'assets/tesany/materialy-03.webp', alt: 'Kvalitní materiály – koupelna' },
-        { src: 'assets/tesany/materialy-04.webp', alt: 'Kvalitní materiály – detail' },
-        { src: 'assets/tesany/materialy-05.webp', alt: 'Kvalitní materiály – vytápění' },
-        { src: 'assets/tesany/materialy-06.webp', alt: 'Kvalitní materiály – střecha' },
-        { src: 'assets/tesany/materialy-07.webp', alt: 'Kvalitní materiály – fasáda' },
+        { src: 'assets/tesany/part%202%20slajdy/IMG_3079-rnxvt51c3xfxf9u9jqho3nyjofhxym5rj9d8vxaf4i.jpeg', alt: 'Kvalitní materiály a vybavení' },
+        { src: 'assets/tesany/part%202%20slajdy/IMG_3080-rnxvtnu3wm5nvh2yhym7hj7rk4xa8k8e9ueyhgijo2.jpeg', alt: 'Kvalitní materiály a vybavení' },
+        { src: 'assets/tesany/part%202%20slajdy/IMG_3081-rnxvu8ik2yxyyw8x57k00dzwmm3cxwihoorn1jnvv6.jpeg', alt: 'Kvalitní materiály a vybavení' },
+        { src: 'assets/tesany/part%202%20slajdy/IMG_3096-rnxvwj8cse37ckwrq7b63t4gwirnr9mvc26d9w98nm.jpeg', alt: 'Kvalitní materiály a vybavení' },
+        { src: 'assets/tesany/part%202%20slajdy/IMG_3097-rnxvx3wsyqvig02qdg8ymnwlyzxqglwyqwj1tzekuq.jpeg', alt: 'Kvalitní materiály a vybavení' },
+        { src: 'assets/tesany/part%202%20slajdy/IMG_3098-rnxvxpj3bxp3v17bv7ldq0g7muz6dnashvj7vciivm.jpeg', alt: 'Kvalitní materiály a vybavení' },
+        { src: 'assets/tesany/part%202%20slajdy/IMG_3100-rnxvyc37vyjzloak7hcfdur9w3vzidsckz6vdzl2qa.jpeg', alt: 'Kvalitní materiály a vybavení' },
+        { src: 'assets/tesany/part%202%20slajdy/IMG_3101-rnxvyxpi95dl0pf5p8ouh7avjyxfff66by71fcp0r6.jpeg', alt: 'Kvalitní materiály a vybavení' },
       ],
       pudorysy: [
-        { src: 'assets/tesany/pudorys-1p-2d.webp', alt: 'Půdorys 1. patra – 2D plán' },
-        { src: 'assets/tesany/pudorys-1p-3d.webp', alt: 'Půdorys 1. patra – 3D vizualizace' },
-        { src: 'assets/tesany/pudorys-2p-2d.webp', alt: 'Půdorys 2. patra – 2D plán' },
-        { src: 'assets/tesany/pudorys-2p-3d.webp', alt: 'Půdorys 2. patra – 3D vizualizace' },
+        { src: 'assets/tesany/part%203%20slajdy/tesany_pudorys_1-1-ro7tcrdzo5wzzm5s8sns38jmx77yqzkcoyrhwnv482.jpeg', alt: 'Půdorys 1. patra' },
+        { src: 'assets/tesany/part%203%20slajdy/tesany_pudorys_2-1-ro7tczujdo8kw3thvebf7oes9o29o9hxq4mv85iko2.jpeg', alt: 'Půdorys 2. patra' },
+        { src: 'assets/tesany/part%203%20slajdy/Prizemi-3-ro7th0lom5qqk1z8e4vyvnvrr08slnglm13n4rjy1u.jpg', alt: 'Půdorys přízemí – 2D plán' },
+        { src: 'assets/tesany/part%203%20slajdy/Prizemi-3D-1-ro7tce890hezh2owdmz04bv6lt0tr843z5mp6semn6.jpg', alt: 'Půdorys přízemí – 3D vizualizace' },
       ],
       zahrada: [
-        { src: 'assets/tesany/zahrada-01.webp', alt: 'Zahrada domu – pohled 1' },
-        { src: 'assets/tesany/zahrada-02.webp', alt: 'Zahrada domu – pohled 2' },
-        { src: 'assets/tesany/zahrada-03.webp', alt: 'Zahrada domu – pohled 3' },
-        { src: 'assets/tesany/zahrada-04.webp', alt: 'Zahrada domu – pohled 4' },
-        { src: 'assets/tesany/zahrada-05.webp', alt: 'Zahrada domu – pohled 5' },
-        { src: 'assets/tesany/zahrada-06.webp', alt: 'Zahrada domu – pohled 6' },
-        { src: 'assets/tesany/zahrada-07.webp', alt: 'Zahrada domu – pohled 7' },
-        { src: 'assets/tesany/zahrada-08.webp', alt: 'Zahrada domu – pohled 8' },
+        { src: 'assets/tesany/part%205%20slajdy/IMG_3080-rnxvtnu3wm5nvh2yhym7hj7rk4xa8k8e9ueyhgijo2.jpeg', alt: 'Zahrada domu – pohled 1' },
+        { src: 'assets/tesany/part%205%20slajdy/IMG_3081-rnxvu8ik2yxyyw8x57k00dzwmm3cxwihoorn1jnvv6.jpeg', alt: 'Zahrada domu – pohled 2' },
+        { src: 'assets/tesany/part%205%20slajdy/IMG_3098-rnxvxpj3bxp3v17bv7ldq0g7muz6dnashvj7vciivm.jpeg', alt: 'Zahrada domu – pohled 3' },
+        { src: 'assets/tesany/part%205%20slajdy/IMG_3100-rnxvyc37vyjzloak7hcfdur9w3vzidsckz6vdzl2qa.jpeg', alt: 'Zahrada domu – pohled 4' },
+        { src: 'assets/tesany/part%205%20slajdy/IMG_3101-rnxvyxpi95dl0pf5p8ouh7avjyxfff66by71fcp0r6.jpeg', alt: 'Zahrada domu – pohled 5' },
       ],
       vizualizace: [
-        { src: 'assets/tesany/vizualizace-01.webp', alt: 'Vizualizace – kuchyň' },
-        { src: 'assets/tesany/vizualizace-02.webp', alt: 'Vizualizace – zahrada' },
-        { src: 'assets/tesany/vizualizace-03.webp', alt: 'Vizualizace – obývací pokoj' },
-        { src: 'assets/tesany/vizualizace-04.webp', alt: 'Vizualizace – exteriér' },
+        { src: 'assets/tesany/part%204%20slajdy/kuchyne-rnxy7l8oxjicyuakwf3x73byv25txbtqk05k9vb3uo.jpg', alt: 'Vizualizace – kuchyně' },
+        { src: 'assets/tesany/part%204%20slajdy/obyvak-rnxy7zc9s21nszq3m37bqhrvru8c4sdplxxuh0q79c.jpg', alt: 'Vizualizace – obývací pokoj' },
+        { src: 'assets/tesany/part%204%20slajdy/Zahrada-rnxy8g9d72otlz1ivailzdi6grwxzc8vo9ol40145c.jpeg', alt: 'Vizualizace – zahrada' },
       ],
     };
 
@@ -520,8 +509,10 @@
     // ── Scroll animations ──
     function initAnimations() {
       const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0 });
       document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
     }
 
