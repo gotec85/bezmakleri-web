@@ -411,10 +411,7 @@ function initContactForm() {
         body: new FormData(form),
       });
       if (res.ok) {
-        form.reset();
-        const success = document.getElementById('form-success');
-        success.classList.add('visible');
-        setTimeout(() => success.classList.remove('visible'), 6000);
+        window.location.href = '/dekujeme';
       } else {
         alert('Odeslání se nezdařilo. Zkuste to prosím znovu nebo nás kontaktujte přímo.');
       }

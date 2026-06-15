@@ -34,6 +34,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .btn-red { background: var(--color-red); color: #fff; }
 .btn-red:hover { background: var(--color-red-dark); transform: translateY(-1px); }
 .btn-pill { border-radius: 100px; }
+.btn-gold { background: var(--color-gold); color: var(--color-bg-dark); }
+.btn-gold:hover { background: #b8924f; transform: translateY(-1px); }
 .btn-full { width: 100%; border-radius: var(--radius); }
 
 .text-link { color: #1a6fdd; text-decoration: underline; }
