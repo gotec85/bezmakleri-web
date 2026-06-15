@@ -383,12 +383,13 @@ function initScrollSpy() {
 /* ── Contact form ── */
 function initContactForm() {
   const form = document.getElementById('contact-form');
+  const btn = form.querySelector('button[type="submit"]');
   const fields = [
     { id: 'name', errId: 'name-error', msg: 'Zadejte prosím vaše jméno.' },
     { id: 'phone', errId: 'phone-error', msg: 'Zadejte prosím telefonní číslo.' },
     { id: 'email', errId: 'email-error', msg: 'Zadejte prosím platný e-mail.' },
   ];
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     let valid = true;
     fields.forEach(f => {
@@ -400,11 +401,28 @@ function initContactForm() {
       errEl.textContent = ok ? '' : f.msg;
       if (!ok) valid = false;
     });
-    if (valid) {
-      form.reset();
-      const success = document.getElementById('form-success');
-      success.classList.add('visible');
-      setTimeout(() => success.classList.remove('visible'), 6000);
+    if (!valid) return;
+    btn.disabled = true;
+    btn.textContent = 'Odesílám…';
+    try {
+      const res = await fetch('https://formspree.io/f/mgobdezv', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        form.reset();
+        const success = document.getElementById('form-success');
+        success.classList.add('visible');
+        setTimeout(() => success.classList.remove('visible'), 6000);
+      } else {
+        alert('Odeslání se nezdařilo. Zkuste to prosím znovu nebo nás kontaktujte přímo.');
+      }
+    } catch {
+      alert('Chyba připojení. Zkontrolujte internet a zkuste znovu.');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Odeslat';
     }
   });
 }

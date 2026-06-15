@@ -3,111 +3,316 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kolik si bere realitní kancelář — reálná provize na příkladu | Bezmakléři</title>
-  <meta name="description" content="Kolik reálně zaplatíte realitce za prodej bytu? Spočítali jsme provizi na konkrétních příkladech a porovnali ji s prodejem bez makléře." />
+  <title>Kolik si bere realitní kancelář — reálná provize 2026</title>
+  <meta name="description" content="Kolik reálně zaplatíte realitce za prodej bytu? Spočítali jsme provizi na konkrétních příkladech, vysvětlili kdo ji platí a porovnali s prodejem bez makléře." />
   <link rel="canonical" href="https://www.bezmakleri.cz/blog/clanek-2-kolik-stoji-realitka-provize" />
   <link rel="icon" type="image/x-icon" href="../favicon.ico" />
   <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.bezmakleri.cz/blog/clanek-2-kolik-stoji-realitka-provize" />
+  <meta property="og:title" content="Kolik si bere realitní kancelář — reálná provize 2026" />
+  <meta property="og:description" content="Kolik reálně zaplatíte realitce za prodej bytu? Spočítali jsme provizi na konkrétních příkladech a porovnali s prodejem bez makléře." />
+  <meta property="og:image" content="https://www.bezmakleri.cz/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Bezmakléři" />
+  <meta property="og:locale" content="cs_CZ" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kolik si bere realitní kancelář — reálná provize 2026" />
+  <meta name="twitter:description" content="Kolik reálně zaplatíte realitce za prodej bytu? Spočítali jsme provizi na konkrétních příkladech a porovnali s prodejem bez makléře." />
+  <meta name="twitter:image" content="https://www.bezmakleri.cz/assets/og-image.jpg" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Kolik vás stojí realitka? Spočítali jsme reálnou provizi",
+    "description": "Kolik reálně zaplatíte realitce za prodej bytu? Spočítali jsme provizi na konkrétních příkladech, vysvětlili kdo ji platí a porovnali s prodejem bez makléře.",
+    "url": "https://www.bezmakleri.cz/blog/clanek-2-kolik-stoji-realitka-provize",
+    "datePublished": "2026-06-13",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Bezmakléři s.r.o.",
+      "url": "https://www.bezmakleri.cz",
+      "logo": "https://www.bezmakleri.cz/assets/logo/logo.webp"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Je provize realitce ze zákona daná?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ne. Výše provize ani to, která strana ji platí, není zákonem stanovena. Vše se řídí smlouvou mezi vámi a realitní kanceláří a vždy je předmětem dohody. Provizi i podmínky proto můžete vyjednávat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Můžu provizi s realitkou smlouvat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ano. Procento i rozsah služeb jsou předmětem dohody. U dražších nemovitostí má smlouvání největší smysl, protože i jedno procento dolů znamená desítky tisíc korun. Nebojte se ptát, co přesně je v provizi zahrnuté."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Musím platit provizi, i když realitka nikoho nesežene?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Záleží na typu smlouvy. U provize splatné až při úspěšném prodeji neplatíte nic, dokud se nemovitost neprodá. Pozor ale na smlouvy s rezervačními poplatky nebo sankcemi za odstoupení — pečlivě si přečtěte podmínky před podpisem."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kolik ušetřím prodejem bez realitky?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rozdíl je mezi procentuální provizí (statisíce) a jednorázovým poplatkem za prezentaci a servis (desítky tisíc). U bytu za 5 milionů typicky ušetříte 150 až 250 tisíc korun. Výměnou za to si sami odbavíte prohlídky a komunikaci se zájemci."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
   <style>
+    /* ── Article layout ── */
     .article-hero {
-      padding: calc(var(--navbar-h) + 3rem) 0 2.5rem;
+      padding: calc(var(--navbar-h) + 3.5rem) 0 3rem;
       background: var(--color-bg-soft);
     }
-    .article-meta {
-      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
-      margin-bottom: 1.25rem;
+    .article-hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 var(--pad);
     }
     .article-tag {
+      display: inline-block;
       font-size: 0.75rem; font-weight: 700; letter-spacing: 0.07em;
       text-transform: uppercase; color: var(--color-red);
-      background: rgba(204,17,17,0.08); padding: 4px 10px; border-radius: 100px;
+      margin-bottom: 1rem;
     }
-    .article-date { font-size: 0.85rem; color: var(--color-muted); }
     .article-hero h1 {
-      font-size: clamp(1.7rem, 4vw, 2.8rem);
-      font-weight: 700; line-height: 1.2; max-width: 760px;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      font-weight: 700; line-height: 1.25;
+      margin-bottom: 1.25rem;
     }
-    .article-hero .perex {
-      font-size: 1.1rem; color: var(--color-muted);
-      line-height: 1.75; max-width: 700px; margin-top: 1rem;
-    }
-    .article-cover {
-      width: 100%; aspect-ratio: 21/9; object-fit: cover;
-      border-radius: var(--radius-lg); margin: 2.5rem 0 0;
-      display: block;
+    .article-meta {
+      font-size: 0.85rem; color: var(--color-muted);
     }
 
+    /* ── Article body ── */
     .article-body {
-      max-width: 760px; margin: 0 auto;
-      padding: 3rem 0 5rem;
-      font-size: 1.05rem; line-height: 1.85; color: var(--color-text);
+      padding: 3.5rem 0 5rem;
     }
-    .article-body p { margin-bottom: 1.4rem; }
-    .article-body h2 {
-      font-size: 1.4rem; font-weight: 700; margin: 2.5rem 0 0.75rem;
-      line-height: 1.25; color: var(--color-text);
+    .article-body-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 var(--pad);
     }
-    .article-body .tip-box {
-      background: rgba(204,17,17,0.06);
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--color-bg-soft);
       border-left: 3px solid var(--color-red);
-      padding: 1rem 1.25rem; border-radius: 0 var(--radius) var(--radius) 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .toc-title {
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--color-muted);
+      margin-bottom: 0.75rem;
+    }
+    .toc ol {
+      list-style: decimal;
+      padding-left: 1.2rem;
+      display: flex; flex-direction: column; gap: 0.35rem;
+    }
+    .toc ol li a {
+      font-size: 0.9rem; font-weight: 600; color: var(--color-text);
+      text-decoration: none; transition: color var(--ease);
+    }
+    .toc ol li a:hover { color: var(--color-red); }
+
+    /* ── Prose ── */
+    .prose p {
+      font-size: 1rem; line-height: 1.8;
+      color: var(--color-text); margin-bottom: 1.25rem;
+    }
+    .prose h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      font-weight: 700; margin: 2.5rem 0 1rem;
+      color: var(--color-text); line-height: 1.3;
+    }
+    .prose h3 {
+      font-size: 1rem; font-weight: 700; color: var(--color-red);
+      margin: 1.75rem 0 0.5rem;
+    }
+    .prose strong { font-weight: 700; }
+    .prose a { color: #1a6fdd; text-decoration: underline; }
+    .prose a:hover { color: #0d4fa0; }
+
+    .tip-box {
+      background: #fff;
+      border-left: 3px solid var(--color-red);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.1rem 1.5rem;
       margin: 1.5rem 0;
+      font-size: 0.9rem; line-height: 1.7;
+      color: var(--color-text);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
-    .article-body .tip-box p { margin-bottom: 0; }
-    .article-body .tip-box strong { color: var(--color-red); }
+    .tip-box strong { color: var(--color-red); }
 
-    .article-table {
-      width: 100%; border-collapse: collapse;
-      margin: 1.5rem 0 2rem; font-size: 0.95rem;
+    /* ── Data tables ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
-    .article-table th {
-      background: var(--color-bg-dark); color: #fff;
-      padding: 0.75rem 1rem; text-align: left; font-weight: 600;
+    .data-table thead {
+      background: var(--color-text);
+      color: #fff;
     }
-    .article-table td {
-      padding: 0.7rem 1rem; border-bottom: 1px solid var(--color-border);
+    .data-table thead th {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
     }
-    .article-table tr:last-child td { border-bottom: none; }
-    .article-table tr:nth-child(even) td { background: var(--color-bg-soft); }
+    .data-table tbody tr {
+      border-bottom: 1px solid var(--color-border);
+    }
+    .data-table tbody tr:last-child { border-bottom: none; }
+    .data-table tbody tr:nth-child(even) { background: var(--color-bg-soft); }
+    .data-table tbody td {
+      padding: 0.85rem 1rem;
+      color: var(--color-text);
+    }
+    .data-table tbody td:first-child { font-weight: 700; }
 
-    .article-cta {
-      background: var(--color-bg-soft); border-radius: var(--radius-lg);
-      padding: 2.5rem; text-align: center; margin-top: 3rem;
+    /* Comparison table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.9rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
-    .article-cta h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; }
-    .article-cta p { font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1.5rem; }
-
-    .back-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      font-size: 0.9rem; font-weight: 600; color: var(--color-muted);
-      margin-bottom: 1.5rem;
-      transition: color 0.2s;
+    .compare-table thead {
+      background: var(--color-text);
+      color: #fff;
     }
-    .back-link:hover { color: var(--color-red); }
+    .compare-table thead th {
+      padding: 0.85rem 1rem;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+    }
+    .compare-table thead th:first-child { text-align: left; }
+    .compare-table thead th:not(:first-child) { text-align: center; }
+    .compare-table tbody tr {
+      border-bottom: 1px solid var(--color-border);
+    }
+    .compare-table tbody tr:last-child { border-bottom: none; }
+    .compare-table tbody tr:nth-child(even) { background: var(--color-bg-soft); }
+    .compare-table tbody td {
+      padding: 0.8rem 1rem;
+      color: var(--color-text);
+    }
+    .compare-table tbody td:not(:first-child) { text-align: center; }
+    .compare-table .highlight-col {
+      background: rgba(201, 169, 110, 0.12);
+      font-weight: 700;
+      color: var(--color-text);
+    }
+    .check { color: #22a06b; font-weight: 700; }
+    .self  { color: var(--color-muted); font-style: italic; }
 
-    .related-links {
-      margin-top: 2rem; padding-top: 2rem;
+    /* ── FAQ ── */
+    .faq-section { margin-top: 2.5rem; }
+    .faq-section h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      font-weight: 700; margin-bottom: 1.5rem;
+    }
+    .faq-item {
       border-top: 1px solid var(--color-border);
-      font-size: 0.9rem; color: var(--color-muted);
+      padding: 1.1rem 0;
     }
-    .related-links a {
-      color: var(--color-red); font-weight: 600;
-      text-decoration: none;
-    }
-    .related-links a:hover { text-decoration: underline; }
+    .faq-item:last-child { border-bottom: 1px solid var(--color-border); }
+    .faq-q { font-size: 1rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.5rem; }
+    .faq-a { font-size: 0.95rem; color: var(--color-muted); line-height: 1.75; }
 
-    @media (max-width: 640px) {
-      .article-hero { padding-top: calc(var(--navbar-h) + 2rem); padding-bottom: 1.5rem; }
-      .article-body { padding: 2rem 0 3.5rem; font-size: 1rem; }
-      .article-cta { padding: 1.75rem 1.25rem; }
-      .article-cover { aspect-ratio: 16/9; border-radius: var(--radius); }
-      .article-table { font-size: 0.85rem; }
-      .article-table th, .article-table td { padding: 0.6rem 0.75rem; }
+    /* ── CTA box ── */
+    .article-cta {
+      background: var(--color-text);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 2rem;
+      margin: 3rem 0 0;
+      text-align: center;
+    }
+    .article-cta h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .article-cta p {
+      font-size: 0.95rem; color: rgba(255,255,255,0.75);
+      margin-bottom: 1.5rem; line-height: 1.7;
+    }
+
+    /* ── Related ── */
+    .related-section { background: var(--color-bg-soft); padding: 4rem 0; }
+    .related-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--color-text); }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .related-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: flex; flex-direction: column;
+    }
+    .related-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+    .related-card-img { aspect-ratio: 16/9; overflow: hidden; background: var(--color-border); }
+    .related-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .related-card:hover .related-card-img img { transform: scale(1.04); }
+    .related-card-body { padding: 1rem 1.1rem 1.25rem; flex: 1; }
+    .related-card-tag {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--color-red);
+      display: block; margin-bottom: 0.4rem;
+    }
+    .related-card-title { font-size: 0.9rem; font-weight: 700; line-height: 1.4; color: var(--color-text); }
+
+    @media (max-width: 680px) {
+      .related-grid { grid-template-columns: 1fr; }
+      .data-table, .compare-table { font-size: 0.82rem; }
+      .data-table thead th, .data-table tbody td,
+      .compare-table thead th, .compare-table tbody td { padding: 0.65rem 0.75rem; }
     }
   </style>
 </head>
@@ -138,35 +343,46 @@
 
   <!-- ARTICLE HERO -->
   <section class="article-hero">
-    <div class="container">
-      <a href="../blog.html" class="back-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
-        Zpět na blog
-      </a>
-      <div class="article-meta">
-        <span class="article-tag">Provize</span>
-        <span class="article-date">12. 6. 2026</span>
-      </div>
+    <div class="article-hero-inner">
+      <span class="article-tag">Provize</span>
       <h1>Kolik vás stojí realitka? Spočítali jsme reálnou provizi</h1>
-      <p class="perex">Mluví se o procentech, ale málokdo si je přepočítá na skutečné koruny. Pojďme si to spočítat na konkrétních číslech — uvidíte, o jakou částku tady reálně jde.</p>
-      <img src="../assets/drony/bezmakleri-dron-02.webp" alt="Letecký pohled na nemovitost — kolik stojí provize realitky" class="article-cover" loading="eager" />
+      <p class="article-meta">13. 6. 2026 &nbsp;·&nbsp; 5 minut čtení</p>
+    </div>
+    <div style="max-width:960px; margin:2rem auto 0; padding:0 var(--pad);">
+      <img src="../assets/blog/clanek-2-kolik-stoji-realitka-provize.webp"
+           alt="Elegantní interiér bytu se smlouvou na stole — téma provize realitní kanceláře"
+           style="width:100%; border-radius:var(--radius-lg); display:block;"
+           width="1376" height="768" />
     </div>
   </section>
 
   <!-- ARTICLE BODY -->
-  <article>
-    <div class="container">
-      <div class="article-body">
+  <section class="article-body">
+    <div class="article-body-inner">
 
-        <p>Když přemýšlíte o prodeji bytu nebo domu, provize realitní kanceláře je často první věc, která vás zastaví. Mluví se o procentech, ale málokdo si je přepočítá na skutečné koruny. Pojďme si to spočítat na konkrétních číslech — uvidíte, o jakou částku tady reálně jde.</p>
+      <!-- TOC -->
+      <nav class="toc" aria-label="Obsah článku">
+        <div class="toc-title">Obsah článku</div>
+        <ol>
+          <li><a href="#kolik-ucetuji">Kolik si realitky účtují</a></li>
+          <li><a href="#modelovy-priklad">Modelový příklad: byt za 5 000 000 Kč</a></li>
+          <li><a href="#kdo-plati">Kdo vlastně provizi platí</a></li>
+          <li><a href="#alternativa">Co kdyby se dala dostat stejná kvalita levněji?</a></li>
+          <li><a href="#zaver">Závěr</a></li>
+        </ol>
+      </nav>
 
-        <h2>Kolik si realitky účtují</h2>
-        <p>Provize se v Česku obvykle pohybuje mezi 3 a 6 % z prodejní ceny nemovitosti, někdy plus DPH. Část kanceláří má i minimální fixní provizi (často kolem 100 tisíc), takže u levnějších nemovitostí může být reálné procento ještě vyšší. To, co dostanete za tuto částku, se kancelář od kanceláře výrazně liší.</p>
+      <div class="prose">
+        <p>Když přemýšlíte o prodeji bytu nebo domu, provize realitní kanceláře je často první věc, která vás zastaví. Mluví se o procentech, ale málokdo si je přepočítá na skutečné koruny. Pojďme si to spočítat na konkrétních číslech — uvidíte, o jakou částku tady reálně jde a jestli za ni dostáváte odpovídající hodnotu.</p>
 
-        <h2>Modelový příklad: byt za 5 000 000 Kč</h2>
+        <h2 id="kolik-ucetuji">Kolik si realitky účtují</h2>
+        <p>Provize se v Česku obvykle pohybuje mezi 3 a 6&nbsp;% z prodejní ceny nemovitosti, někdy plus DPH. Řada kanceláří má navíc minimální fixní provizi, často kolem 100 tisíc korun, takže u levnějších nemovitostí může reálné procento vyšplhat ještě výš. Sazba se liší podle regionu, typu nemovitosti i konkrétní kanceláře.</p>
+        <p>Za provizi byste měli dostat kompletní službu: ocenění, profesionální prezentaci, inzerci, organizaci prohlídek, vyjednávání a právní servis. Rozdíly v kvalitě jsou ale obrovské — některé kanceláře odvedou špičkovou práci, jiné jen vyfotí byt na mobil a nahodí inzerát. A platíte stejné procento tak jako tak.</p>
+
+        <h2 id="modelovy-priklad">Modelový příklad: byt za 5 000 000 Kč</h2>
         <p>Řekněme, že prodáváte byt za pět milionů korun. Takhle vypadá provize podle sazby:</p>
 
-        <table class="article-table">
+        <table class="data-table">
           <thead>
             <tr>
               <th>Provize</th>
@@ -182,51 +398,138 @@
           </tbody>
         </table>
 
-        <p>Jinými slovy: za zprostředkování prodeje můžete zaplatit od 150 do 300 tisíc korun. To je u mnoha rodin víc než roční úspory.</p>
+        <p>Jinými slovy: za zprostředkování prodeje můžete zaplatit od 150 do 300 tisíc korun. To je u mnoha rodin víc než roční úspory — a u dražších nemovitostí jde částka ještě výš. U domu za 10 milionů se při 5% provizi bavíme už o půl milionu korun.</p>
 
-        <h2>Co kdyby se dala dostat stejná kvalita levněji?</h2>
+        <h2 id="kdo-plati">Kdo vlastně provizi platí</h2>
+        <p>Často se říká, že provizi platí kupující — a v lecčems je to pravda. Zákon výslovně neurčuje, která strana provizi hradí, takže záleží na smlouvě a místních zvyklostech. Formálně si službu objednává prodávající, a tak bývá ve smlouvě uvedený jako ten, kdo provizi platí.</p>
+        <p>V praxi je ale provize zpravidla započítaná v ceně nemovitosti, takže ji fakticky nese kupující v rámci kupní ceny. Na Moravě je navíc běžné, že provizi hradí přímo kupující, nebo se o ni obě strany dělí — typicky dvě třetiny prodávající a třetinu kupující. Ať tak či onak, jsou to peníze, které z obchodu zmizí: buď sníží částku, která zůstane vám, nebo zdraží nemovitost pro kupujícího a tím zúží okruh zájemců, kteří na ni dosáhnou.</p>
+
+        <div class="tip-box">
+          <strong>Tip:</strong> Při sjednávání s realitkou si vždy nechte písemně potvrdit, kdo provizi platí a co přesně za ni dostanete. Nejasnosti kolem provize patří mezi nejčastější zdroje sporů při prodeji nemovitosti.
+        </div>
+
+        <h2 id="alternativa">Co kdyby se dala dostat stejná kvalita levněji?</h2>
         <p>Hlavní hodnota, kterou dobrá realitka dodává, je profesionální prezentace nemovitosti a její propagace — kvalitní fotky, video, web nemovitosti, inzerce a cílené kampaně, plus právní servis. Tyhle služby se ale dají zajistit i samostatně, za jednorázový poplatek v řádu desítek tisíc korun místo procenta z ceny.</p>
 
-        <table class="article-table">
+        <table class="compare-table">
           <thead>
             <tr>
               <th></th>
               <th>Realitka (5 % z 5 mil.)</th>
-              <th>Balíček bez makléře</th>
+              <th class="highlight-col">Balíček bez makléře</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Náklad</td><td>250 000 Kč</td><td>od cca 40 000 Kč</td></tr>
-            <tr><td>Focení, video, dron</td><td>ano</td><td>ano</td></tr>
-            <tr><td>Web nemovitosti + kampaně</td><td>ano</td><td>ano</td></tr>
-            <tr><td>Právní a smluvní servis</td><td>ano</td><td>ano</td></tr>
-            <tr><td>Prohlídky a výběr kupce</td><td>za vás</td><td>řešíte vy</td></tr>
+            <tr>
+              <td>Náklad</td>
+              <td>250 000 Kč</td>
+              <td class="highlight-col">od cca 40 000 Kč</td>
+            </tr>
+            <tr>
+              <td>Focení, video, dron</td>
+              <td><span class="check">ano</span></td>
+              <td class="highlight-col"><span class="check">ano</span></td>
+            </tr>
+            <tr>
+              <td>Web nemovitosti + kampaně</td>
+              <td><span class="check">ano</span></td>
+              <td class="highlight-col"><span class="check">ano</span></td>
+            </tr>
+            <tr>
+              <td>Právní a smluvní servis</td>
+              <td><span class="check">ano</span></td>
+              <td class="highlight-col"><span class="check">ano</span></td>
+            </tr>
+            <tr>
+              <td>Prohlídky a výběr kupce</td>
+              <td>za vás</td>
+              <td class="highlight-col"><span class="self">řešíte vy</span></td>
+            </tr>
           </tbody>
         </table>
 
-        <p>Hlavní rozdíl není v kvalitě prezentace, ale v tom, že prohlídky a komunikaci se zájemci si odbavíte sami. Za to si necháte v kapse i přes 200 tisíc korun.</p>
+        <p>Hlavní rozdíl není v kvalitě prezentace, ale v tom, že prohlídky a komunikaci se zájemci si odbavíte sami. Za pár hodin práce navíc — typicky několik prohlídek a telefonátů — si necháte v kapse i přes 200 tisíc korun. Když si spočítáte hodinovou „mzdu" za tohle, je to nejlépe placená brigáda, jakou kdy budete mít.</p>
 
-        <div class="tip-box">
-          <p><strong>Tip:</strong> Spočítejte si vlastní číslo: vezměte cenu své nemovitosti a vynásobte ji 0,05. Tolik byste přibližně dali realitce za 5% provizi. Porovnejte to s jednorázovým balíčkem služeb.</p>
+        <h2 id="zaver">Závěr</h2>
+        <p>Provize realitce není „zadarmo" jen proto, že ji platíte až z prodeje — pořád jsou to peníze, které z obchodu odejdou. U dnešních cen nemovitostí jde o statisíce. Pokud jste ochotní vzít na sebe prohlídky a komunikaci, prodej bez makléře vám většinu této částky vrátí zpět.</p>
+        <p>Jak celý prodej zvládnout krok za krokem se dočtete v <a href="jak-prodat-nemovitost-bez-realitky.html">kompletním návodu na prodej bez realitky</a>. Jak nemovitost správně nafotit, aby zaujala na první pohled, popisujeme v <a href="clanek-3-jak-nafotit-nemovitost.html">článku o fotografování nemovitostí</a>.</p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq-section">
+        <h2>Často kladené otázky</h2>
+        <div class="faq-item">
+          <div class="faq-q">Je provize realitce ze zákona daná?</div>
+          <div class="faq-a">Ne. Výše provize ani to, která strana ji platí, není zákonem stanovena. Vše se řídí smlouvou mezi vámi a realitní kanceláří a vždy je předmětem dohody. Provizi i podmínky proto můžete vyjednávat.</div>
         </div>
-
-        <h2>Závěr</h2>
-        <p>Provize realitce není „zadarmo" jen proto, že ji platíte až z prodeje — pořád jsou to vaše peníze. U dnešních cen nemovitostí jde o statisíce. Pokud jste ochotní vzít na sebe prohlídky a komunikaci, prodej bez makléře vám většinu této částky vrátí zpět.</p>
-        <p>My v Bezmakléřích vám dodáme profesionální prezentaci i právní servis za zlomek ceny provize.</p>
-
-        <div class="article-cta">
-          <h3>Chcete prodat bez makléře?</h3>
-          <p>Napište si o nezávaznou nabídku služeb. Stačí jeden e-mail nebo telefonát.</p>
-          <a href="../index.html#kontakt" class="btn btn-red btn-pill">Nezávazná poptávka</a>
+        <div class="faq-item">
+          <div class="faq-q">Můžu provizi s realitkou smlouvat?</div>
+          <div class="faq-a">Ano. Procento i rozsah služeb jsou předmětem dohody. U dražších nemovitostí má smlouvání největší smysl, protože i jedno procento dolů znamená desítky tisíc korun. Nebojte se ptát, co přesně je v provizi zahrnuté.</div>
         </div>
-
-        <div class="related-links">
-          Další čtení: <a href="jak-prodat-nemovitost-bez-realitky.html">Jak prodat nemovitost bez realitky — kompletní návod</a>
+        <div class="faq-item">
+          <div class="faq-q">Musím platit provizi, i když realitka nikoho nesežene?</div>
+          <div class="faq-a">Záleží na typu smlouvy. U provize splatné až při úspěšném prodeji neplatíte nic, dokud se nemovitost neprodá. Pozor ale na smlouvy s rezervačními poplatky nebo sankcemi za odstoupení — pečlivě si přečtěte podmínky před podpisem.</div>
         </div>
+        <div class="faq-item">
+          <div class="faq-q">Kolik ušetřím prodejem bez realitky?</div>
+          <div class="faq-a">Rozdíl je mezi procentuální provizí (statisíce) a jednorázovým poplatkem za prezentaci a servis (desítky tisíc). U bytu za 5 milionů typicky ušetříte 150 až 250 tisíc korun. Výměnou za to si sami odbavíte prohlídky a komunikaci se zájemci.</div>
+        </div>
+      </div>
 
+      <!-- CTA box -->
+      <div class="article-cta">
+        <h2>Profesionální prezentace za zlomek ceny provize</h2>
+        <p>My v Bezmakléřích vám zajistíme focení, video, dronové záběry, vlastní web nemovitosti, cílené kampaně i kompletní právní servis — za jednorázový poplatek místo statisícové provize. Vy si odbavíte prohlídky, peníze za prodej zůstanou vám.</p>
+        <a href="../index.html#kontakt" class="btn btn-red btn-pill">Napište si o nezávaznou nabídku</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container">
+      <h2>Související články</h2>
+      <div class="related-grid">
+        <a href="jak-prodat-nemovitost-bez-realitky.html" class="related-card">
+          <div class="related-card-img">
+            <img src="../assets/drony/bezmakleri-dron-01.webp" alt="Letecký snímek nemovitosti k prodeji" loading="lazy" />
+          </div>
+          <div class="related-card-body">
+            <span class="related-card-tag">Prodej nemovitosti</span>
+            <div class="related-card-title">Jak prodat nemovitost bez realitky: kompletní návod krok za krokem</div>
+          </div>
+        </a>
+        <a href="clanek-3-jak-nafotit-nemovitost.html" class="related-card">
+          <div class="related-card-img">
+            <img src="../assets/foto/bezmakleri-interier-01.webp" alt="Profesionální fotografie interiéru nemovitosti" loading="lazy" />
+          </div>
+          <div class="related-card-body">
+            <span class="related-card-tag">Fotografie</span>
+            <div class="related-card-title">Jak nafotit nemovitost na prodej, aby se prodala rychleji</div>
+          </div>
+        </a>
+        <a href="clanek-4-homestaging.html" class="related-card">
+          <div class="related-card-img">
+            <img src="../assets/foto/bezmakleri-interier-05.webp" alt="Homestaging obývacího pokoje před prodejem" loading="lazy" />
+          </div>
+          <div class="related-card-body">
+            <span class="related-card-tag">Homestaging</span>
+            <div class="related-card-title">Homestaging: co to je a proč zvyšuje prodejní cenu</div>
+          </div>
+        </a>
       </div>
     </div>
-  </article>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section style="background: var(--color-bg); padding: 4rem 0; text-align: center; border-top: 1px solid var(--color-border);">
+    <div class="container">
+      <h2 style="font-size: clamp(1.5rem,3vw,2rem); font-weight:700; margin-bottom:1rem;">Chcete prodat bez makléře?</h2>
+      <p style="color: var(--color-muted); margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto;">Ozvěte se nám – poradíme a připravíme vaši nemovitost na prodej od A do Z.</p>
+      <a href="../index.html#kontakt" class="btn btn-red btn-pill">Nezávazná poptávka</a>
+    </div>
+  </section>
 
   <script>
     const hamburger = document.getElementById('hamburger');
