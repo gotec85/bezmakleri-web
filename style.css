@@ -446,7 +446,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 @media (max-width: 480px) {
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+  .service-item h3 { font-size: 0.78rem; margin-top: 0.5rem; }
   .slider-track { grid-auto-columns: 100%; }
   .hero-actions { flex-direction: column; align-items: center; }
   .hero-actions .btn { width: 100%; max-width: 320px; }
