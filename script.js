@@ -149,19 +149,25 @@ function createSlider({ trackId, prevId, nextId, dotsId, images, lightbox = true
     dotsEl.appendChild(dot);
   });
 
-  // Přidat 3 klony prvních snímků na konec pro plynulý nekonečný loop
+  // Klony pro plynulý nekonečný loop v obou směrech:
+  // na konec přidat klony prvních snímků, na začátek klony posledních
   const realSlides = track.querySelectorAll('.slider-slide');
-  for (let i = 0; i < 3 && i < images.length; i++) {
+  const CLONES = Math.min(3, images.length);
+  const firstReal = track.firstChild;
+
+  for (let i = 0; i < CLONES; i++) {
     const clone = realSlides[i].cloneNode(true);
     clone.setAttribute('aria-hidden', 'true');
     track.appendChild(clone);
   }
 
-  function perVisible() {
-    if (window.innerWidth <= 480) return 1;
-    if (window.innerWidth <= 900) return 2;
-    return 3;
+  const leadFrag = document.createDocumentFragment();
+  for (let i = images.length - CLONES; i < images.length; i++) {
+    const clone = realSlides[i].cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    leadFrag.appendChild(clone);
   }
+  track.insertBefore(leadFrag, firstReal);
 
   function getStep() {
     const slide = track.querySelector('.slider-slide');
@@ -171,13 +177,14 @@ function createSlider({ trackId, prevId, nextId, dotsId, images, lightbox = true
   function moveTo(idx, animated = true) {
     const step = getStep();
     if (!step) return;
+    const domIdx = idx + CLONES;
     if (!animated) {
       track.style.transition = 'none';
-      track.style.transform = `translateX(-${idx * step}px)`;
+      track.style.transform = `translateX(-${domIdx * step}px)`;
       track.offsetHeight; // force reflow
       track.style.transition = '';
     } else {
-      track.style.transform = `translateX(-${idx * step}px)`;
+      track.style.transform = `translateX(-${domIdx * step}px)`;
     }
   }
 
@@ -187,22 +194,18 @@ function createSlider({ trackId, prevId, nextId, dotsId, images, lightbox = true
   }
 
   function goTo(idx) {
-    const per = perVisible();
-    const max = Math.max(0, images.length - per);
-    offset = Math.max(0, Math.min(max, idx));
+    offset = idx;
     moveTo(offset);
     updateDots(offset);
-    document.getElementById(prevId).disabled = offset <= 0;
-    document.getElementById(nextId).disabled = offset >= max;
   }
 
-  function loopForward() {
+  function next() {
     if (looping) return;
     offset += 1;
     moveTo(offset);
     updateDots(offset);
 
-    // Po přejetí přes všechny reálné snímky do zóny klonů – tiše skočit zpět na 0
+    // Po přejetí přes všechny reálné snímky do zóny klonů – tiše skočit zpět na začátek
     if (offset >= images.length) {
       looping = true;
       setTimeout(() => {
@@ -214,18 +217,36 @@ function createSlider({ trackId, prevId, nextId, dotsId, images, lightbox = true
     }
   }
 
+  function prev() {
+    if (looping) return;
+    offset -= 1;
+    moveTo(offset);
+    updateDots(offset);
+
+    // Po přejetí přes začátek do zóny klonů – tiše skočit zpět na konec
+    if (offset < 0) {
+      looping = true;
+      setTimeout(() => {
+        moveTo(images.length - 1, false);
+        offset = images.length - 1;
+        updateDots(offset);
+        looping = false;
+      }, 420);
+    }
+  }
+
   function startAuto() {
     stopAuto();
-    autoTimer = setInterval(loopForward, 4500);
+    autoTimer = setInterval(next, 4500);
   }
 
   function stopAuto() {
     if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
   }
 
-  document.getElementById(prevId).addEventListener('click', () => { goTo(offset - 1); startAuto(); });
-  document.getElementById(nextId).addEventListener('click', () => { goTo(offset + 1); startAuto(); });
-  window.addEventListener('resize', () => { offset = Math.max(0, Math.min(Math.max(0, images.length - perVisible()), offset)); moveTo(offset, false); updateDots(offset); }, { passive: true });
+  document.getElementById(prevId).addEventListener('click', () => { prev(); startAuto(); });
+  document.getElementById(nextId).addEventListener('click', () => { next(); startAuto(); });
+  window.addEventListener('resize', () => { moveTo(offset, false); updateDots(offset); }, { passive: true });
   window.addEventListener('load', () => goTo(0), { once: true });
 
   const viewport = track.closest('.slider-viewport');
@@ -234,7 +255,7 @@ function createSlider({ trackId, prevId, nextId, dotsId, images, lightbox = true
     viewport.addEventListener('touchstart', e => { swipeStartX = e.touches[0].clientX; }, { passive: true });
     viewport.addEventListener('touchend', e => {
       const diff = swipeStartX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) { goTo(offset + (diff > 0 ? 1 : -1)); startAuto(); }
+      if (Math.abs(diff) > 40) { (diff > 0 ? next : prev)(); startAuto(); }
     }, { passive: true });
   }
 
